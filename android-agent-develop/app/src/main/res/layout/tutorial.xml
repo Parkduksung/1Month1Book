@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/main_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/contents_linearlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="0px"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/gallery_layer"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <com.rsupport.mobile.agent.ui.tutorial.TutorialGallery
+                android:id="@+id/introgallery"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_gravity="center"
+                android:fadingEdge="none"
+                android:spacing="20dip"
+                android:unselectedAlpha="255" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/rvstart"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/contents_button_height"
+        android:layout_marginLeft="@dimen/margin_18"
+        android:layout_marginRight="@dimen/margin_18"
+        android:background="@drawable/button_contents"
+        android:text="@string/tutorial_agent_start"
+        android:textColor="@color/color04"
+        android:textSize="@dimen/size03" />
+
+    <LinearLayout
+        android:id="@+id/positionView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/margin_20"
+        android:layout_marginTop="@dimen/margin_20">
+
+        <ImageView
+            android:id="@+id/index_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_6"
+            android:background="@drawable/img_tutorial_dot" />
+
+        <ImageView
+            android:id="@+id/index_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_6"
+            android:layout_marginRight="@dimen/margin_6"
+            android:background="@drawable/img_tutorial_dot" />
+
+        <ImageView
+            android:id="@+id/index_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_6"
+            android:layout_marginRight="@dimen/margin_6"
+            android:background="@drawable/img_tutorial_dot" />
+
+        <ImageView
+            android:id="@+id/index_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_6"
+            android:layout_marginRight="@dimen/margin_6"
+            android:background="@drawable/img_tutorial_dot"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/index_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_6"
+            android:background="@drawable/img_tutorial_dot"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

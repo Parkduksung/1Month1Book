@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color04"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+
+        <include
+            android:id="@+id/title_toplayout"
+            layout="@layout/layout_title" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/title_toplayout">
+
+            <ScrollView
+                android:id="@+id/layout_scrollview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:id="@+id/contents_linearlayout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_18"></LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <!-- IndexBar. 필요에 따라 visible 하여 사용 -->
+        <RelativeLayout
+            android:id="@+id/background_index_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/title_toplayout"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:id="@+id/background_index"
+                android:layout_width="@dimen/indexbar_width"
+                android:layout_height="fill_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/margin_17"
+                android:layout_marginTop="@dimen/margin_17"
+                android:clickable="true"
+                android:orientation="vertical"></LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/index_postion_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/title_toplayout"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/index_positon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_17"
+                android:background="@drawable/bg_seeking_position" />
+
+            <TextView
+                android:id="@+id/index_positon_text"
+                android:layout_width="@dimen/seeking_text_width"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/margin_33"
+                android:gravity="center"
+                android:textColor="@color/color04"
+                android:textSize="@dimen/size05" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <include
+        layout="@layout/layout_bottom_title"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/copyright"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_13"
+        android:layout_marginTop="@dimen/margin_13"
+        android:gravity="center"
+        android:text="@string/copyright"
+        android:textColor="@color/color03"
+        android:textSize="@dimen/size01"
+        android:visibility="gone" />
+</LinearLayout>

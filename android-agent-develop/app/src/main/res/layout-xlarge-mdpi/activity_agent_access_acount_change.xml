@@ -1,0 +1,208 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.rsupport.mobile.agent.ui.settings.AgentAccessAcountChangeActivity">
+
+    <LinearLayout
+        android:layout_width="@dimen/width_644"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text="@string/account_change_des"
+            android:textColor="@color/color02"
+            android:textSize="@dimen/size01" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_dialogue_group"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@string/agent_id"
+                android:textColor="@color/color05"
+                android:textSize="@dimen/size04" />
+
+            <EditText
+                android:id="@+id/old_id"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_32"
+                android:layout_marginBottom="@dimen/dp_12"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/bg_input"
+                android:lines="1"
+                android:paddingLeft="@dimen/margin_8"
+                android:paddingRight="@dimen/margin_8"
+                android:singleLine="true"
+                android:textColor="@color/color02"
+                android:textColorHint="#ff888888"
+                android:textSize="@dimen/size01" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color09" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@string/agent_passwd"
+                android:textColor="@color/color05"
+                android:textSize="@dimen/size04" />
+
+            <EditText
+                android:id="@+id/old_passwd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_32"
+                android:layout_marginBottom="@dimen/dp_12"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/bg_input"
+                android:lines="1"
+                android:paddingLeft="@dimen/margin_8"
+                android:paddingRight="@dimen/margin_8"
+                android:password="true"
+                android:singleLine="true"
+                android:textColor="@color/color02"
+                android:textColorHint="#ff888888"
+                android:textSize="@dimen/size01" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color09" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:text="@string/account_change_new_account_des"
+            android:textColor="@color/color02"
+            android:textSize="@dimen/size01" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_dialogue_group"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@string/agent_id"
+                android:textColor="@color/color05"
+                android:textSize="@dimen/size04" />
+
+            <EditText
+                android:id="@+id/new_id"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_32"
+                android:layout_marginBottom="@dimen/dp_12"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/bg_input"
+                android:lines="1"
+                android:paddingLeft="@dimen/margin_8"
+                android:paddingRight="@dimen/margin_8"
+                android:singleLine="true"
+                android:textColor="@color/color02"
+                android:textColorHint="#ff888888"
+                android:textSize="@dimen/size01" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color09" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@string/agent_passwd"
+                android:textColor="@color/color05"
+                android:textSize="@dimen/size04" />
+
+            <EditText
+                android:id="@+id/new_passwd"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_32"
+                android:layout_marginBottom="@dimen/dp_12"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/bg_input"
+                android:lines="1"
+                android:paddingLeft="@dimen/margin_8"
+                android:paddingRight="@dimen/margin_8"
+                android:password="true"
+                android:singleLine="true"
+                android:textColor="@color/color02"
+                android:textColorHint="#ff888888"
+                android:textSize="@dimen/size01" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/color09" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_10"
+                android:text="@string/agent_passwd_confirm"
+                android:textColor="@color/color05"
+                android:textSize="@dimen/size04" />
+
+            <EditText
+                android:id="@+id/new_passwd_check"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_32"
+                android:layout_marginBottom="@dimen/dp_12"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_10"
+                android:layout_marginTop="3dp"
+                android:background="@drawable/bg_input"
+                android:lines="1"
+                android:paddingLeft="@dimen/margin_8"
+                android:paddingRight="@dimen/margin_8"
+                android:password="true"
+                android:singleLine="true"
+                android:textColor="@color/color02"
+                android:textColorHint="#ff888888"
+                android:textSize="@dimen/size01" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

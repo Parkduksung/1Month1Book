@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.rsupport.mobile.agent.ui.login.LoginViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/loginlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_login"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_26"
+        android:paddingRight="@dimen/margin_26">
+
+        <LinearLayout
+            android:id="@+id/headlogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_52"
+            android:layout_marginBottom="@dimen/margin_12">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/remotrview_agent_logo" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/discription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/headlogo"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/agent_discription"
+                android:textColor="@color/color04" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/inputlayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/discription"
+            android:layout_marginTop="@dimen/margin_16"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size05"
+                android:background="@drawable/bg_input_caption"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/padding_8"
+                android:paddingRight="@dimen/padding_8">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/enterprise_customers"
+                    android:textColor="@color/color04"
+                    android:textSize="@dimen/size04" />
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/corpid"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/agentinfo_edittext_height"
+                android:layout_marginBottom="@dimen/margin_8"
+                android:background="@drawable/bg_input_login_company"
+                android:hint="@string/msg_inputcorpid"
+                android:inputType="text|textNoSuggestions"
+                android:lines="1"
+                android:text="@={viewModel.corpIdObservable}"
+                android:paddingLeft="@dimen/margin_8"
+                android:paddingRight="@dimen/margin_8"
+                android:textColor="@color/color11"
+                android:textColorHint="#ff888888"
+                android:textSize="@dimen/size01" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_input_login"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/userid"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/agentinfo_edittext_height"
+                    android:background="@drawable/transparent_background"
+                    android:hint="@string/msg_inputwebid"
+                    android:inputType="text|textNoSuggestions"
+                    android:lines="1"
+                    android:paddingLeft="@dimen/margin_8"
+                    android:paddingRight="@dimen/margin_8"
+                    android:textColor="@color/color11"
+                    android:textColorHint="#ff888888"
+                    android:textSize="@dimen/size01"
+                    android:text="@={viewModel.userIdObservable}" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="@dimen/margin_8"
+                    android:layout_marginRight="@dimen/margin_8"
+                    android:background="#9dd2ec" />
+
+                <EditText
+                    android:id="@+id/userpasswd"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/agentinfo_edittext_height"
+                    android:background="@drawable/transparent_background"
+                    android:hint="@string/msg_inputwebpwd"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="textPassword"
+                    android:lines="1"
+                    android:paddingLeft="@dimen/margin_8"
+                    android:paddingRight="@dimen/margin_8"
+                    android:textColor="@color/color11"
+                    android:textColorHint="#ff888888"
+                    android:textSize="@dimen/size01"
+                    android:text="@={viewModel.userPwdObservable}" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/login_btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/inputlayout"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/margin_52"
+            android:paddingBottom="@dimen/margin_5">
+
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/detail_item_height"
+                android:background="@drawable/button_login"
+                android:onClick="@{()->viewModel.performLogin()}"
+                android:text="@string/agent_install"
+                android:textColor="@color/color04"
+                android:textSize="@dimen/size03" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>

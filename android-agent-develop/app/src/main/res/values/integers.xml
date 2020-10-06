@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="i37">37</integer>
+    <integer name="i38">38</integer>
+    <integer name="i43">43</integer>
+    <integer name="i48">48</integer>
+    <integer name="i49">49</integer>
+    <integer name="i53">53</integer>
+    <integer name="i56">56</integer>
+    <integer name="i61">61</integer>
+    <integer name="i65">65</integer>
+    <integer name="i66">66</integer>
+    <integer name="i67">67</integer>
+    <integer name="i68">68</integer>
+    <integer name="i70">70</integer>
+    <integer name="i71">71</integer>
+    <integer name="i72">72</integer>
+    <integer name="i73">73</integer>
+    <integer name="i74">74</integer>
+    <integer name="i75">75</integer>
+    <integer name="i76">76</integer>
+    <integer name="i77">77</integer>
+    <integer name="i78">78</integer>
+    <integer name="i79">79</integer>
+    <integer name="i80">80</integer>
+    <integer name="i81">81</integer>
+    <integer name="i82">82</integer>
+    <integer name="i83">83</integer>
+    <integer name="i85">85</integer>
+    <integer name="i87">87</integer>
+    <integer name="i88">88</integer>
+    <integer name="i89">89</integer>
+    <integer name="i90">90</integer>
+    <integer name="i97">97</integer>
+    <integer name="i99">99</integer>
+    <integer name="i101">101</integer>
+    <integer name="i102">102</integer>
+    <integer name="i104">104</integer>
+    <integer name="i105">105</integer>
+    <integer name="i107">107</integer>
+    <integer name="i108">108</integer>
+    <integer name="i111">111</integer>
+    <integer name="i112">112</integer>
+    <integer name="i113">113</integer>
+    <integer name="i114">114</integer>
+    <integer name="i115">115</integer>
+    <integer name="i116">116</integer>
+    <integer name="i117">117</integer>
+    <integer name="i118">118</integer>
+    <integer name="i119">119</integer>
+    <integer name="i121">121</integer>
+    <integer name="i122">122</integer>
+
+</resources>

@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ui.settings.device.AgentDeviceNameSettingActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:background="@drawable/bg_dialogue_group"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/agent_display_name"
+            android:textColor="@color/color05"
+            android:textSize="@dimen/size04" />
+
+        <EditText
+            android:id="@+id/device_name"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="@dimen/dp_12"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_32"
+            android:background="@drawable/bg_input"
+            android:lines="1"
+            android:paddingLeft="@dimen/margin_8"
+            android:paddingRight="@dimen/margin_8"
+            android:textColor="@color/color02"
+            android:textColorHint="#ff888888"
+            android:textSize="@dimen/size01" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

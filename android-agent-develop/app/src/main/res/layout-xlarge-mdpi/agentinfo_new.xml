@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.rsupport.mobile.agent.ui.agent.agentinfo.AgentInfoViewModel" />
+    </data>
+
+
+    <LinearLayout
+        android:id="@+id/main_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color07"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/title_toplayout"
+            layout="@layout/layout_title" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="@dimen/width_644"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:paddingLeft="@dimen/dp_18"
+                    android:paddingRight="@dimen/dp_18">
+
+                    <ImageView
+                        android:id="@+id/imgagent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="46dp"
+                        android:layout_marginBottom="46dp"
+                        android:src="@{viewModel.isLoggedIn() ? @drawable/logon_img: @drawable/logoff_img}" />
+
+                    <TextView
+                        android:id="@+id/text_login_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{viewModel.isLoggedIn() ? @string/logon_message : @string/agnet_logout_notice}"
+                        android:textColor="@color/color02"
+                        android:textSize="@dimen/size01"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/tvcomputerexplain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:textColor="@color/color02"
+                        android:textSize="@dimen/size01"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/txt_expired_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_10"
+                        android:textColor="@color/color02"
+                        android:textSize="@dimen/size01"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/btn_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/contents_button_height"
+                        android:layout_marginTop="11dp"
+                        android:background="@{viewModel.isLoggedIn ? @drawable/button_bottomtitle : @drawable/button_agent_login}"
+                        android:clickable="true"
+                        android:ellipsize="end"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:onClick="@{()-> viewModel.toggleLogin()}"
+                        android:textColor="@color/text_selector_09"
+                        android:textSize="@dimen/size03"
+                        android:text="@{viewModel.isLoggedIn ? @string/logout : @string/login}" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/width_644"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="34dp"
+                    android:gravity="bottom"
+                    android:paddingLeft="18dp"
+                    android:paddingRight="@dimen/dp_18">
+
+                    <ListView
+                        android:id="@+id/agentinfo_list1"
+                        style="@style/RVListViewDialogWhiteGroupTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="45dp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</layout>

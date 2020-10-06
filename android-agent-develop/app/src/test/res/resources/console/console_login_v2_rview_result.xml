@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DATA>
+    <RETCODE>100</RETCODE>
+    <WEBSERVER>https://www.rview.com</WEBSERVER>
+    <WEBSERVERPORT>443</WEBSERVERPORT>
+    <AGENTFAVORITELISTURL>/services/api/console/agent_favorite_list</AGENTFAVORITELISTURL>
+    <AGENTCHECKURL>/services/api/console/agent_connection_check</AGENTCHECKURL>
+    <AGENTDELETEURL>/services/api/console/agent_delete</AGENTDELETEURL>
+    <AGENTCONNECTOPTIONURL>/services/api/console/agent_option</AGENTCONNECTOPTIONURL>
+    <AGENTUPDATEURL>/services/api/console/agent_update</AGENTUPDATEURL>
+    <USERKEY>A84BF86EF714483E9AFF722842D90871</USERKEY>
+    <BIZID>847</BIZID>
+    <IDTYPE>0</IDTYPE>
+    <UPDATESERVER>https://update.rview.com</UPDATESERVER>
+    <UPDATESERVERPORT>443</UPDATESERVERPORT>
+    <UPDATECLIENTDIR>%TEMPDIR%rv5x_console</UPDATECLIENTDIR>
+    <CONSOLEUPDATEPATH>update/console</CONSOLEUPDATEPATH>
+    <ACTIVEURL>/services/api/console/license_activation</ACTIVEURL>
+    <ACCESSAUTHTYPE>0</ACCESSAUTHTYPE>
+    <DELAGENTDISABLED>0</DELAGENTDISABLED>
+    <APPFTP>1</APPFTP>
+    <REMOTESTOP>/services/api/console/viewer_kill</REMOTESTOP>
+    <MULTIWEBSERVER>https://www.rview.com;443|https://biz.rview.com;443</MULTIWEBSERVER>
+    <MULTIUPDATESERVER>
+        https://update.rview.com;443|https://updatejp1.rview.com;443|https://updatejp2.rview.com;443|https://update1.rview.com;443
+    </MULTIUPDATESERVER>
+    <NEWVERSION>0</NEWVERSION>
+    <ACCOUNTLOCK>0</ACCOUNTLOCK>
+    <UPLOADSERVER>upload.rview.com</UPLOADSERVER>
+    <UPLOADSERVERPORT>80</UPLOADSERVERPORT>
+    <USE_HXENGINE>1</USE_HXENGINE>
+    <AGENT_INSTALL_VALIDATE_URL>/services/api/agent_install/check_validate_access_account
+    </AGENT_INSTALL_VALIDATE_URL>
+    <AGENT_LOGIN_URL>/services/api/agent/login</AGENT_LOGIN_URL>
+    <AGENT_INSTALL_OK_URL>/services/api/agent_install/install_ok</AGENT_INSTALL_OK_URL>
+    <AGENT_GROUP_LIST_URL>/services/api/console/agent_group_list</AGENT_GROUP_LIST_URL>
+</DATA>

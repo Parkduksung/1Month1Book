@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<DATA>
+    <RETCODE>100</RETCODE>
+    <ACCESS_TOKEN>access_toke_123</ACCESS_TOKEN>
+    <REFRESH_TOKEN>refresh_token_123</REFRESH_TOKEN>
+    <API_VERSION>v2</API_VERSION>
+    <REFRESH_TOKEN_URL>/refresh_token/url</REFRESH_TOKEN_URL>
+</DATA>

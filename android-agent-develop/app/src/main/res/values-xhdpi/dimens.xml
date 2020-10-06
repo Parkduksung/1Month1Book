@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+/* 
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License"); 
+** you may not use this file except in compliance with the License. 
+** You may obtain a copy of the License at 
+**
+**     http://www.apache.org/licenses/LICENSE-2.0 
+**
+** Unless required by applicable law or agreed to in writing, software 
+** distributed under the License is distributed on an "AS IS" BASIS, 
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+** See the License for the specific language governing permissions and 
+** limitations under the License.
+*/
+-->
+
+<resources>
+    <!-- Check Box -->
+    <dimen name="margin_check_right">5dip</dimen>
+
+    <!-- Detail Info -->
+    <dimen name="detail_item_height">42.75dip</dimen>
+
+    <!-- START DEFINES REMOTE EXPLORER  -->
+    <dimen name="re_dialog_text_linespace">5sp</dimen>
+
+    <dimen name="re_middle_fontsize">14dip</dimen>
+    <dimen name="re_fontsize_10">10dip</dimen>
+    <dimen name="re_fontsize_11">11dip</dimen>
+    <dimen name="re_fontsize_12">12dip</dimen>
+    <dimen name="re_fontsize_13">13dip</dimen>
+    <dimen name="re_fontsize_14">14dip</dimen>
+    <dimen name="re_fontsize_16">16dip</dimen>
+
+    <!-- END DEFINES REMOTE EXPLORER  -->
+
+    <dimen name="size01">13.5dp</dimen>
+    <dimen name="size02">10.125dp</dimen>
+    <dimen name="size03">15.75dp</dimen>
+    <dimen name="size04">11.25dp</dimen>
+    <dimen name="size05">22.5dp</dimen>
+    <dimen name="size06">29.25dp</dimen>
+
+    <dimen name="size01_lineheight">18dp</dimen>
+    <dimen name="size02_lineheight">13.5dp</dimen>
+    <dimen name="size03_lineheight">20.25dp</dimen>
+
+    <dimen name="header_height">49.5dp</dimen>
+    <dimen name="header_shadow_height">2.25dp</dimen>
+
+    <dimen name="agentlist_height">90dp</dimen>
+    <dimen name="agentlist_item_height">90.5625dp</dimen>
+    <dimen name="agentlist_detail_width">46.125dp</dimen>
+    <dimen name="agentlist_detail_swipe_width">47.25dp</dimen>
+    <dimen name="agentlist_no_agent_width">513dp</dimen>
+
+    <dimen name="contents_button_height">45dp</dimen>
+    <dimen name="langage_textview_height">30.375dp</dimen>
+    <dimen name="agentinfo_edittext_height">42.75dip</dimen>
+    <dimen name="typing_edittext_height">32.625dp</dimen>
+    <dimen name="title_sub_height">36dp</dimen>
+
+    <dimen name="margin_80">90dp</dimen>
+    <dimen name="margin_72">81dp</dimen>
+    <dimen name="margin_62">69.75dp</dimen>
+    <dimen name="margin_50">56.25dp</dimen>
+    <dimen name="margin_44">49.5dp</dimen>
+    <dimen name="margin_42">47.25dp</dimen>
+    <dimen name="margin_40">45dp</dimen>
+    <dimen name="margin_38">42.75dp</dimen>
+    <dimen name="margin_36">40.5dp</dimen>
+    <dimen name="margin_33">37.125dp</dimen>
+    <dimen name="margin_32">36dp</dimen>
+    <dimen name="margin_30">33.75dp</dimen>
+    <dimen name="margin_26">29.25dp</dimen>
+    <dimen name="margin_24">27dp</dimen>
+    <dimen name="margin_22">24.75dp</dimen>
+    <dimen name="margin_20">22.5dp</dimen>
+    <dimen name="margin_18">20.25dp</dimen>
+    <dimen name="margin_17">19.125dp</dimen>
+    <dimen name="margin_16">18dp</dimen>
+    <dimen name="margin_15">16.875dp</dimen>
+    <dimen name="margin_14">15.75dp</dimen>
+    <dimen name="margin_13">14.625dp</dimen>
+    <dimen name="margin_12">13.5dp</dimen>
+    <dimen name="margin_11">12.375dp</dimen>
+    <dimen name="margin_10">11.25dp</dimen>
+    <dimen name="margin_9">10.125dp</dimen>
+    <dimen name="margin_8">9dp</dimen>
+    <dimen name="margin_6">6.75dp</dimen>
+    <dimen name="margin_5">5.625dp</dimen>
+    <dimen name="margin_4">4.5dp</dimen>
+    <dimen name="margin_3">3.375dp</dimen>
+    <dimen name="margin_2">2.25dp</dimen>
+    <dimen name="margin_1">1.125dp</dimen>
+    <dimen name="margin_14_minus">-14.625dp</dimen>
+    <dimen name="margin_6_minus">-6.75dp</dimen>
+
+    <dimen name="line_1">0.5625dp</dimen>
+
+    <dimen name="padding_4">4.5dp</dimen>
+    <dimen name="padding_5">5.625dp</dimen>
+    <dimen name="padding_6">6.75dp</dimen>
+    <dimen name="padding_7">7.875dp</dimen>
+    <dimen name="padding_8">9dp</dimen>
+    <dimen name="padding_9">10.125dp</dimen>
+    <dimen name="padding_10">11.25dp</dimen>
+    <dimen name="padding_12">13.5dp</dimen>
+    <dimen name="padding_14">15.75dp</dimen>
+    <dimen name="padding_16">18dp</dimen>
+    <dimen name="padding_22">24.75dp</dimen>
+    <dimen name="padding_24">27dp</dimen>
+
+    <dimen name="toolbar_height">55.125dp</dimen>
+    <dimen name="toolbar_item_width">75.375dp</dimen>
+    <dimen name="toolbar_prev_width">29.25dp</dimen>
+    <dimen name="toolbar_next_width">29.25dp</dimen>
+
+    <dimen name="toolbar_list_width">495dp</dimen>
+    <dimen name="toolbar_list_height">321.75dp</dimen>
+
+    <dimen name="point_arrow_top_margin">-3dp</dimen>
+    <dimen name="point_arrow_botton_margin">-6.2dp</dimen>
+
+    <dimen name="screensettings_quality_height">112.5dp</dimen>
+    <dimen name="screensettings_quality_land_height">195.75dp</dimen>
+    <dimen name="width_416">468dp</dimen>
+
+    <dimen name="monitor_number_width">101.25dp</dimen>
+
+    <dimen name="product_select_max_width">553.5dp</dimen>
+    <dimen name="special_keyboard_max_width">594dp</dimen>
+
+    <dimen name="tutorial_select_margintop">146.25dp</dimen>
+
+    <!-- DialogGroup -->
+    <dimen name="dialoggroup_bottommargin">11.25dip</dimen>
+
+    <!-- Toast -->
+    <dimen name="toast_side_padding">15.75dip</dimen>
+    <dimen name="toast_updown_padding">10.25dip</dimen>
+
+    <!-- Dialog -->
+    <dimen name="dialog_min_content_height">105.75dip</dimen>
+    <dimen name="dialog_max_width">326.25dp</dimen>
+    <dimen name="dialog_min_height">193.5dp</dimen>
+    <dimen name="dialog_list_height">337.5dp</dimen>
+
+    <!-- indexBar -->
+    <dimen name="indexbar_width">22.5dip</dimen>
+    <dimen name="seeking_text_width">20.25dp</dimen>
+
+    <!-- EditText (common)  -->
+    <dimen name="edittext_height_32">36dip</dimen>
+
+    <!-- resolution wheel -->
+    <dimen name="wheel_item_height">36dip</dimen>
+    <dimen name="wheel_ses_item_height">54dip</dimen>
+    <dimen name="wheel_multiimg_width">54dip</dimen>
+    <dimen name="wheel_full_height">198dip</dimen>    <!-- (36*4) + 54 -->
+    <dimen name="wheel_edge_length">72dip</dimen>    <!-- (36*4) / 2 -->
+</resources>

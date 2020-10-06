@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.rsupport.mobile.agent">
+
+    <uses-sdk tools:overrideLibrary="com.rsupport.android.rscommon" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.SET_ANIMATION_SCALE" />
+    <uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- 삼성 Knox 퍼미션 -->
+    <uses-permission android:name="android.permission.sec.MDM_HW_CONTROL" />
+    <uses-permission android:name="android.permission.sec.MDM_APP_MGMT" />
+    <uses-permission android:name="android.permission.sec.MDM_REMOTE_CONTROL" />
+    <uses-permission android:name="android.permission.sec.MDM_LICENSE_LOG" />
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony.cdma"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony.gsm"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.network"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.location.gps"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.wifi"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.usb.host"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.usb.accessory"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.live_wallpaper"
+        android:required="false" />
+
+    <application
+        android:name=".AgentApplication"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:theme="@style/AppCompat.NoTitleBar"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup">
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="3.0" />
+
+        <activity
+            android:name=".ui.launcher.LauncherActivity"
+            android:label="@string/app_name"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+
+                <action android:name="net.xoaframework.intent.action.MAIN" />
+
+                <category android:name="net.xoaframework.intent.category.DEFAULT" />
+                <category android:name="net.xoaframework.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.tutorial.TutorialSelectActivity"
+            android:configChanges="keyboardHidden"
+            android:exported="false"
+            android:label="@string/app_name"
+            android:theme="@style/AppCompat.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.tutorial.TutorialActivity"
+            android:theme="@style/AppCompat.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.notice.NoticeActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:theme="@style/AppCompat.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".ui.faq.FAQActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity
+            android:name=".ui.about.LicenceActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenLayout"
+            android:theme="@style/AppCompat.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".ui.agent.agentinfo.AgentInfoActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenLayout"
+            android:theme="@style/AppCompat.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".ui.agent.install.AgentInstallActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.settings.GroupSelectActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.settings.AgentSettingActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.settings.AgentAllowIPSettingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenLayout|locale"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.settings.AgentAllowMACSettingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenLayout|locale"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ui.settings.AgentLogActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenLayout|locale" />
+        <activity
+            android:name=".ui.settings.basic.BasicSettingActivity"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:theme="@style/AppCompat.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".ui.dialog.AgentDialogActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenLayout|locale"
+            android:theme="@style/AppCompat.Translucent" />
+        <activity
+            android:name="com.rsupport.media.mediaprojection.ProjectionActivity"
+            android:allowTaskReparenting="true"
+            android:configChanges="keyboardHidden|orientation|keyboard|locale|fontScale"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="behind"
+            android:theme="@style/AppCompat.CustomDialog" />
+        <activity
+            android:name=".ui.settings.device.AgentDeviceNameSettingActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenLayout|locale" />
+        <activity
+            android:name=".ui.settings.AgentAccessAcountChangeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenLayout|locale"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.exit.ExitConfirmActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/AppCompat.Translucent" />
+        <activity
+            android:name=".ui.permission.AllowPermissionActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenLayout|locale" />
+        <activity
+            android:name=".ui.terms.TermsActivity"
+            android:theme="@style/AppCompat.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+
+        <activity
+            android:name=".ui.settings.SettingPageActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize|screenLayout|locale"
+            android:windowSoftInputMode="adjustResize|stateHidden"></activity>
+
+        <activity
+            android:name=".ui.settings.delete.AgentDeleteActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+
+        <service
+            android:name=".service.AgentMainService"
+            android:foregroundServiceType="mediaProjection" />
+        <service android:name=".modules.push.service.RSPushService" />
+
+        <service android:name=".modules.push.fcm.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".service.ErrorLogUploadService" />
+        <service
+            android:name=".service.ErrorLogUploadJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+
+        <receiver
+            android:name=".receiver.ConnetingNoticeReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.rsupport.mobile.agent.conneting_message" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".receiver.AgentPushReceiver">
+            <intent-filter>
+                <action android:name="com.rsupport.rvagent.action.push.MESSAGING" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

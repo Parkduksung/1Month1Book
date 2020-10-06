@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@+id/agentlistlayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color07"
+    android:orientation="vertical">
+
+    <!-- Search layout is fixed. -->
+    <RelativeLayout
+        android:id="@+id/searchagentlayout"
+        android:layout_width="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content">
+
+        <ImageButton
+            android:id="@+id/search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/margin_4"
+            android:layout_marginRight="@dimen/margin_5"
+            android:background="@drawable/button_search_agent" />
+
+        <RelativeLayout
+            android:id="@+id/searcheditlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="@dimen/margin_5"
+            android:layout_marginLeft="@dimen/margin_8"
+            android:layout_marginTop="@dimen/margin_5"
+            android:layout_toLeftOf="@id/search_btn">
+
+            <EditText
+                android:id="@+id/search_edit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height_32"
+                android:background="@drawable/bg_input"
+                android:hint="@string/agentlist_hint"
+                android:inputType="text|textNoSuggestions"
+                android:paddingLeft="@dimen/padding_8"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/color01"
+                android:textColorHint="@color/color01"
+                android:textSize="@dimen/size01" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/navi_layout"
+        android:layout_below="@id/searchagentlayout"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_6"
+            android:layout_marginRight="@dimen/dp_2"
+            android:background="@drawable/navigator_icon" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/navi_text"
+            android:textColor="@color/color02"
+            android:textSize="@dimen/size01" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/contents_button_height"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/margin_18"
+        android:layout_marginRight="@dimen/margin_18"
+        android:layout_marginBottom="@dimen/margin_10"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/group_select"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:ellipsize="end"
+            android:background="@drawable/button_bottomtitle"
+            android:gravity="center"
+            android:textColor="@color/text_selector_09"
+            android:text="@string/group_select"
+            android:textSize="@dimen/size03" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/group_list"
+        android:layout_width="match_parent"
+        android:layout_above="@id/bottom_title_layout"
+        android:layout_below="@id/navi_layout"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/no_folder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottom_title_layout"
+        android:layout_below="@id/navi_layout"
+        android:text="@string/group_no_folder"
+        android:gravity="center"
+        android:textColor="@color/color01"
+        android:textSize="@dimen/size01"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

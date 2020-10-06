@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="aboutweblink">https://www.rview.com</string>
+    <string name="cn_aboutweblink">http://www.rview.cn</string>
+    <string name="cn_serverip_biz">https://biz.rview.cn</string>
+    <string name="cn_serverip_personal">https://www.rview.cn</string>
+    <string name="copyright">Powered by RSUPPORT</string>
+    <string name="copyright1">Copyright ⓒ 2001~2013 RSUPPORT Co., Ltd.</string>
+    <string name="copyright2">All rights reserved.</string>
+    <string name="http">http://</string>
+    <string name="https">https://</string>
+    <string name="mailtofriend_homepage">https://content.rview.com</string>
+    <string name="mailfeedback_to">support.us@rsupport.com</string>
+    <string name="more_settings_remotewol_url">/mobile/wolusing</string>
+    <string name="more_settings_url">/mobile/wol</string>
+    <string name="no_agent_weblink_url">/Mobile/Install</string>
+    <string name="serverip_biz">https://www.rview.com</string>
+    <string name="serverip_personal">https://www.rview.com</string>
+    <string name="url_join">/Mobile/Join</string>
+    <string name="url_licence">/Mobile/LicenseforAndroid</string>
+    <string name="url_notice">/Mobile/NoticeList</string>
+    <string name="url_proxy_help">/Service/Help</string>
+    <string name="faq_website">https://content.rview.com/en/support/faq/#mobile</string>
+    <string name="error_code">Error Code</string>
+    <string name="lang_china">中文 (简体)</string>
+    <string name="lang_japan">日本語</string>
+    <string name="lang_korea">한국어</string>
+    <string name="lang_portugal">português</string>
+    <string name="lang_spain">Español</string>
+    <string name="lang_taiwan">中文 (繁體)</string>
+    <string name="lang_us">English</string>
+</resources>

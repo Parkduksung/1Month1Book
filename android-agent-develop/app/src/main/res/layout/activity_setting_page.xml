@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color07"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_title" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="34dp"
+            android:paddingTop="23dp"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp_18"
+            android:paddingRight="@dimen/dp_18">
+            <!-- First Box -->
+            <ListView
+                android:id="@+id/agentinfo_list1"
+                style="@style/RVListViewDialogWhiteGroupTheme"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/dialoggroup_bottommargin" />
+
+            <!-- Second Box -->
+            <ListView
+                android:id="@+id/agentinfo_list2"
+                style="@style/RVListViewDialogWhiteGroupTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

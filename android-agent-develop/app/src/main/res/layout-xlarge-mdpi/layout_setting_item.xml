@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/setting_item"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/listgroup_item"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:duplicateParentState="true"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/item_left_layout"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/padding_14"
+            android:paddingLeft="@dimen/padding_12"
+            android:paddingRight="@dimen/padding_12"
+            android:paddingTop="@dimen/padding_14"
+            android:duplicateParentState="true">
+
+            <TextView
+                android:id="@+id/item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:textColor="@color/text_selector_07" />
+
+            <LinearLayout
+                android:id="@+id/item_content_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/item_check"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:duplicateParentState="true"
+                    android:src="@drawable/icon_dialoguegroup_select"
+                    android:padding="@dimen/padding_5"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/item_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:duplicateParentState="true"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/text_selector_01" />
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/radio_http"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <RadioButton
+                    android:id="@+id/http"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:text="@string/http"
+                    android:textSize="@dimen/size01"
+                    android:textColor="@color/color02"
+                    android:drawablePadding="7dp"
+                    android:button="@null"
+                    app:buttonCompat="@null"
+                    android:drawableLeft="@drawable/radio_selector" />
+
+                <RadioButton
+                    android:layout_marginLeft="16dp"
+                    android:id="@+id/https"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/https"
+                    android:textSize="@dimen/size01"
+                    android:textColor="@color/color02"
+                    android:button="@null"
+                    app:buttonCompat="@null"
+                    android:drawableLeft="@drawable/radio_selector"
+                    android:drawablePadding="7dp" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/item_content_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/height_40"
+                android:background="@drawable/input_background"
+                android:layout_marginTop="@dimen/margin_4"
+                android:paddingLeft="@dimen/padding_10"
+                android:paddingRight="@dimen/padding_10"
+                android:maxLines="1"
+                android:inputType="text|textNoSuggestions"
+                android:textColor="@color/color02"
+                android:textSize="@dimen/size01"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:duplicateParentState="true">
+
+            <ImageView
+                android:id="@+id/imgNew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:background="@drawable/icon_new"
+                android:visibility="gone" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:duplicateParentState="true">
+
+            <ImageView
+                android:id="@+id/imgBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/margin_10"
+                android:layout_marginRight="@dimen/margin_12" />
+
+        </FrameLayout>
+    </LinearLayout>
+
+    <include
+        android:id="@+id/div_horizon"
+        layout="@layout/div_horizon_no_nomargin" />
+
+</LinearLayout>

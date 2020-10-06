@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.rsupport.mobile.agent.ui.settings.basic.DefaultSettingViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialogue_group"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:focusable="false"
+                android:text="@string/aboutversion"
+                android:textColor="@color/text_selector_07"
+                android:textSize="@dimen/size04"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="버전정보" />
+
+            <TextView
+                android:id="@+id/item_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@{viewModel.version}"
+                android:textColor="@color/text_selector_01"
+                android:textSize="@dimen/size01"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item_title"
+                tools:text="6.0.12.9" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include layout="@layout/div_horizon_no_nomargin" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/licenseLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/listgroup_item"
+            android:onClick="@{()->viewModel.onClickLicense()}">
+
+            <TextView
+                android:id="@+id/itemLicense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/license"
+                android:textColor="@color/text_selector_01"
+                android:textSize="@dimen/size01"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/licenseButton"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="라이선스 정보" />
+
+            <ImageView
+                android:id="@+id/licenseButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/button_arrowright"
+                android:duplicateParentState="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include layout="@layout/div_horizon_no_nomargin" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tutorialLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/listgroup_item"
+            android:onClick="@{()->viewModel.onClickTutorial()}">
+
+            <TextView
+                android:id="@+id/itemTutorial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:singleLine="true"
+                android:text="@string/about_tutorial"
+                android:textColor="@color/text_selector_01"
+                android:textSize="@dimen/size01"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/tutorialButton"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="튜토리얼" />
+
+            <ImageView
+                android:id="@+id/tutorialButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/button_arrowright"
+                android:duplicateParentState="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include layout="@layout/div_horizon_no_nomargin" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/termsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/listgroup_item"
+            android:onClick="@{()->viewModel.onClickTerms()}">
+
+            <TextView
+                android:id="@+id/itemTerms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:singleLine="true"
+                android:text="@string/terms_of_use"
+                android:textColor="@color/text_selector_01"
+                android:textSize="@dimen/size01"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/termsButton"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="서비스 이용약관" />
+
+            <ImageView
+                android:id="@+id/termsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/button_arrowright"
+                android:duplicateParentState="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include layout="@layout/div_horizon_no_nomargin" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/privacyLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/listgroup_item"
+            android:onClick="@{()->viewModel.onClickPrivacy()}">
+
+            <TextView
+                android:id="@+id/itemPrivacy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:singleLine="true"
+                android:text="@string/privacy_policy"
+                android:textColor="@color/text_selector_01"
+                android:textSize="@dimen/size01"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/privacyButton"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="개인정보 처리방치" />
+
+            <ImageView
+                android:id="@+id/privacyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/button_arrowright"
+                android:duplicateParentState="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include layout="@layout/div_horizon_no_nomargin" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/noticeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/listgroup_item"
+            android:onClick="@{()->viewModel.onClickNotice()}">
+
+            <TextView
+                android:id="@+id/itemNotice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:duplicateParentState="true"
+                android:singleLine="true"
+                android:text="@string/about_notice"
+                android:textColor="@color/text_selector_01"
+                android:textSize="@dimen/size01"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/newNoticeImageView"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="공지 사항" />
+
+            <ImageView
+                android:id="@+id/noticeButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/button_arrowright"
+                android:duplicateParentState="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/newNoticeImageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/icon_new"
+                android:duplicateParentState="true"
+                android:visibility="@{viewModel.hasNewNotice ? View.VISIBLE : View.GONE}"
+                app:layout_constraintBottom_toBottomOf="@+id/noticeButton"
+                app:layout_constraintEnd_toStartOf="@+id/noticeButton"
+                app:layout_constraintTop_toTopOf="@+id/noticeButton" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include layout="@layout/div_horizon_no_nomargin" />
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/faqLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/listgroup_item"
+            android:onClick="@{()->viewModel.onClickFaq()}">
+
+            <TextView
+                android:id="@+id/itemFaq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:singleLine="true"
+                android:text="@string/string_faq"
+                android:textColor="@color/text_selector_01"
+                android:textSize="@dimen/size01"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/faqButton"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="FAQ" />
+
+            <ImageView
+                android:id="@+id/faqButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/button_arrowright"
+                android:duplicateParentState="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+</layout>
+

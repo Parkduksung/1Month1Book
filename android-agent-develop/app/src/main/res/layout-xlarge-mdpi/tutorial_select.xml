@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/color05">
+
+    <com.rsupport.mobile.agent.ui.views.BoundedLinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        custom:bounded_width="@dimen/product_select_max_width"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_logo"
+            android:layout_marginTop="@dimen/margin_100"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/txt_select_guide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color08"
+                android:textSize="@dimen/size01"
+                android:layout_marginTop="@dimen/margin_40"
+                android:text="@string/remoteview_welcome_message" />
+
+            <ImageView
+                android:id="@+id/tutorial_select_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/img_joinus01"
+                android:layout_marginTop="@dimen/tutorial_select_margintop" />
+
+            <LinearLayout
+                android:id="@+id/personselectlayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_24">
+
+                <RelativeLayout
+                    android:id="@+id/tutorial_person_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <!-- contentDescription 1 is selected, and 0 is not selected. -->
+                    <Button
+                        android:id="@+id/tutorial_person_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="1"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:layout_marginRight="@dimen/margin_7"
+                        android:background="@drawable/button_radio_on" />
+
+                    <TextView
+                        android:id="@+id/tutorial_person_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size01_lineheight"
+                        android:layout_toRightOf="@id/tutorial_person_btn"
+                        android:text="@string/tutorial_select_person"
+                        android:textSize="@dimen/size01"
+                        android:textColor="@color/text_selector_06" />
+
+                    <TextView
+                        android:id="@+id/tutorial_person_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tutorial_person_title"
+                        android:layout_toRightOf="@id/tutorial_person_btn"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:text="@string/tutorial_select_person_desc"
+                        android:textSize="@dimen/size01"
+                        android:textColor="@color/text_selector_06" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/line_1"
+                    android:background="@color/color06"
+                    android:layout_marginTop="@dimen/margin_6"
+                    android:layout_marginBottom="@dimen/margin_6" />
+
+                <RelativeLayout
+                    android:id="@+id/tutorial_corp_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+                    <!-- contentDescription 1 is selected, and 0 is not selected. -->
+                    <Button
+                        android:id="@+id/tutorial_corp_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="1"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="@dimen/margin_2"
+                        android:layout_marginRight="@dimen/margin_7"
+                        android:background="@drawable/button_radio_off" />
+
+                    <TextView
+                        android:id="@+id/tutorial_corp_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size01_lineheight"
+                        android:layout_toRightOf="@id/tutorial_corp_btn"
+                        android:text="@string/tutorial_select_corp"
+                        android:textSize="@dimen/size01"
+                        android:textColor="@color/text_selector_06" />
+
+                    <TextView
+                        android:id="@+id/tutorial_corp_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tutorial_corp_title"
+                        android:layout_toRightOf="@id/tutorial_corp_btn"
+                        android:layout_marginTop="@dimen/margin_5"
+                        android:text="@string/tutorial_select_corp_desc"
+                        android:textSize="@dimen/size01"
+                        android:textColor="@color/text_selector_06" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.rsupport.mobile.agent.ui.views.BoundedLinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tutorial_next_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/margin_40"
+        android:layout_marginRight="@dimen/margin_40"
+        android:background="@drawable/button_next">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:text="@string/tutorial_select_next"
+            android:textColor="@color/color04"
+            android:textSize="@dimen/size03"
+            android:layout_marginRight="@dimen/margin_80" />
+    </LinearLayout>
+
+</RelativeLayout>

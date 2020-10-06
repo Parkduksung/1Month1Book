@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="@dimen/width_644"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical">
+        <!-- First Box -->
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:text="@string/agent_allow_mac_add"
+            android:textColor="@color/color01" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_mac"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/dp_38"
+                android:layout_weight="1"
+                android:background="@drawable/bg_input"
+                android:hint="@string/mac_address_setting_hint"
+                android:inputType="textUri"
+                android:maxLength="12"
+                android:paddingLeft="@dimen/padding_8"
+                android:paddingRight="@dimen/padding_8"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/color01"
+                android:textColorHint="@color/color01"
+                android:textSize="@dimen/size01" />
+
+            <ImageView
+                android:id="@+id/btn_mac_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_5"
+                android:src="@drawable/button_dataplus" />
+        </LinearLayout>
+
+        <!-- Second Box -->
+        <TextView
+            android:id="@+id/tv_list_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:layout_marginTop="@dimen/margin_14"
+            android:text="@string/agent_allow_mac_added"
+            android:textColor="@color/color01" />
+
+        <ListView
+            android:id="@+id/about_list1"
+            style="@style/RVListViewDialogWhiteGroupTheme"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:listSelector="@color/transparent" />
+
+        <LinearLayout
+            android:id="@+id/address_help_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_10"
+                android:layout_marginTop="@dimen/margin_14"
+                android:text="@string/mac_address_help_sub_title"
+                android:textColor="@color/color01" />
+
+            <include layout="@layout/address_help_layout"></include>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

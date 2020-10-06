@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white">
+
+    <!-- 기본정보 -->
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color02"
+        android:textSize="@dimen/size01"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/information" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/defaultSettingFragment"
+        android:name="com.rsupport.mobile.agent.ui.settings.basic.DefaultSettingFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!-- 설정-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color02"
+        android:textSize="@dimen/size01"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/agent_setting" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/serverSettingFragment"
+        android:name="com.rsupport.mobile.agent.ui.settings.basic.ServerSettingFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <!--기타-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color02"
+        android:textSize="@dimen/size01"
+        android:layout_marginTop="13dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/etc" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/etcSettingFragment"
+        android:name="com.rsupport.mobile.agent.ui.settings.basic.EtcSettingFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

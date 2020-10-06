@@ -1,0 +1,16 @@
+/build
+/app/build
+.idea
+.gradle
+*.iml
+asp_agent.iml
+Engine_module.iml
+RVAgent.iml
+app/app.iml
+local.properties
+my-repository/db/transactions/
+my-repository/db/txn-protorevs/
+projectFilesBackup/
+src/androidTest/
+src/test/
+credentials.json

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+/* 
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License"); 
+** you may not use this file except in compliance with the License. 
+** You may obtain a copy of the License at 
+**
+**     http://www.apache.org/licenses/LICENSE-2.0 
+**
+** Unless required by applicable law or agreed to in writing, software 
+** distributed under the License is distributed on an "AS IS" BASIS, 
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
+** See the License for the specific language governing permissions and 
+** limitations under the License.
+*/
+-->
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <dimen name="size01">15.75dp</dimen>
+    <dimen name="size02">12.375dp</dimen>
+    <dimen name="size03">20.25dp</dimen>
+    <dimen name="size04">13.5dp</dimen>
+    <dimen name="size05">27dp</dimen>
+    <dimen name="size06">36dp</dimen>
+
+    <dimen name="size01_lineheight">22.5dp</dimen>
+    <dimen name="size02_lineheight">15.75dp</dimen>
+    <dimen name="size03_lineheight">27dp</dimen>
+
+    <dimen name="product_select_max_width">513dp</dimen>
+    <dimen name="max_width_642" tools:ignore="MissingDefaultResource">722.25dp</dimen>
+    <dimen name="max_height_460" tools:ignore="MissingDefaultResource">517.5dp</dimen>
+
+    <dimen name="agentlist_height">112.5dp</dimen>
+    <dimen name="agentlist_item_height">113.0625dp</dimen>
+    <dimen name="title_sub_height">45dp</dimen>
+
+    <dimen name="toolbar_item_width">90dp</dimen>
+    <dimen name="toolbar_height">76.5dp</dimen>
+    <dimen name="width_644">724.5dp</dimen>
+
+    <dimen name="height_40" tools:ignore="MissingDefaultResource">45dp</dimen>
+
+    <dimen name="margin_162" tools:ignore="MissingDefaultResource">182.25dp</dimen>
+    <dimen name="margin_100" tools:ignore="MissingDefaultResource">112.5dp</dimen>
+    <dimen name="margin_90" tools:ignore="MissingDefaultResource">101.25dp</dimen>
+    <dimen name="margin_68" tools:ignore="MissingDefaultResource">76.5dp</dimen>
+    <dimen name="margin_66" tools:ignore="MissingDefaultResource">74.25dp</dimen>
+    <dimen name="margin_45" tools:ignore="MissingDefaultResource">50.625dp</dimen>
+    <dimen name="margin_7" tools:ignore="MissingDefaultResource">7.875dp</dimen>
+
+    <dimen name="point_arrow_top_margin">-3.825dp</dimen>
+
+    <dimen name="screensettings_quality_height">254.25dp</dimen>
+
+    <dimen name="progress_tip_max_width" tools:ignore="MissingDefaultResource">594dp</dimen>
+
+    <dimen name="dialoggroup_bottommargin">22.5dp</dimen>
+    <dimen name="dialog_list_height">405dp</dimen>
+
+    <dimen name="contents_button_height">56.25dp</dimen>
+</resources>

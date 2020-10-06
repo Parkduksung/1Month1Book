@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/margin_18"
+    android:paddingRight="@dimen/margin_18"
+    android:focusable="false"
+    android:clickable="false">
+
+    <com.rsupport.mobile.agent.ui.views.BoundedLinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        custom:bounded_width="@dimen/product_select_max_width"
+        android:gravity="center_horizontal"
+        android:layout_marginLeft="@dimen/margin_20"
+        android:layout_marginRight="@dimen/margin_20"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="@dimen/margin_6"
+        android:focusable="false">
+
+        <ImageView
+            android:id="@+id/tutorial_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/margin_14"
+            android:layout_marginLeft="@dimen/margin_10"
+            android:focusable="false">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tutorial_summary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:textSize="@dimen/size01"
+                    android:textColor="@color/color05"
+                    android:textStyle="bold" />
+
+                <ScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fadeScrollbars="false"
+                    android:layout_marginTop="@dimen/margin_18"
+                    android:scrollbarAlwaysDrawVerticalTrack="true">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tutorial_desc_1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tutorial_desc_1"
+                            android:textSize="@dimen/size01"
+                            android:textColor="@color/color01"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tutorial_desc_2_1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tutorial_desc_2_1"
+                            android:textSize="@dimen/size01"
+                            android:textColor="@color/color01"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tutorial_desc_2_2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/size01"
+                            android:textColor="@color/color01"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tutorial_cn_desc_2_2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/size01"
+                            android:textColor="@color/color01"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tutorial_desc_2_3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/size01"
+                            android:textColor="@color/color01"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tutorial_desc_3_1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tutorial_desc_3_1"
+                            android:textSize="@dimen/size01"
+                            android:textColor="@color/color01"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tutorial_desc_3_2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/size01"
+                            android:textColor="@color/color01"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tutorial_cn_desc_3_2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/size01"
+                            android:textColor="@color/color01"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tutorial_desc_3_3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/size01"
+                            android:textColor="@color/color01"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tutorial_desc_4_1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/size01"
+                            android:textColor="@color/color01"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tutorial_desc_4_2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/size01"
+                            android:textColor="@color/color01"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tutorial_desc_4_3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/size01"
+                            android:textColor="@color/color01"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tutorial_desc_4_4"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/size01"
+                            android:textColor="@color/color01"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tutorial_desc_5_1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/size01"
+                            android:textColor="@color/color01"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tutorial_desc_5_2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/size01"
+                            android:textColor="@color/color01"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tutorial_desc_5_3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/size01"
+                            android:textColor="@color/color01"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tutorial_corp_desc_2_1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/tutorial_corp_desc_2_1"
+                            android:textSize="@dimen/size01"
+                            android:textColor="@color/color01"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tutorial_corp_desc_2_2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/size01"
+                            android:textColor="@color/color01"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tutorial_cn_corp_desc_2_2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/size01"
+                            android:textColor="@color/color01"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tutorial_corp_desc_2_3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/size01"
+                            android:textColor="@color/color01"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tutorial_corp_desc_3_2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/size01"
+                            android:textColor="@color/color01"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tutorial_cn_corp_desc_3_2"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/size01"
+                            android:textColor="@color/color01"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tutorial_corp_desc_3_3"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="@dimen/size01"
+                            android:textColor="@color/color01"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </RelativeLayout>
+    </com.rsupport.mobile.agent.ui.views.BoundedLinearLayout>
+</RelativeLayout>

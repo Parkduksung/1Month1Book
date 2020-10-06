@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.rsupport.mobile.agent.ui.settings.basic.ServerSettingViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialogue_group"
+        android:orientation="vertical">
+
+        <!--  사용제품  -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/productSelectLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/listgroup_item_top"
+            android:clickable="true"
+            android:padding="10dp"
+            android:onClick="@{()->viewModel.toggleProductTypeExpand()}">
+
+            <TextView
+                android:id="@+id/item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:focusable="false"
+                android:text="@string/systemsetting_product_config"
+                android:textColor="@color/text_selector_07"
+                android:textSize="@dimen/size04"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="사용 제품" />
+
+            <TextView
+                android:id="@+id/productTypeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/text_selector_01"
+                android:textSize="@dimen/size01"
+                android:text="@{viewModel.isStandard() ? @string/systemsetting_product_type_business : @string/systemsetting_product_type_server}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/collapseButton"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/item_title"
+                tools:text="사용 제품" />
+
+            <ImageView
+                android:id="@+id/collapseButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:src="@drawable/button_arrowdown"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--  Standard / Enterprise  -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/standardServerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="2dp"
+            android:onClick="@{()->viewModel.setStandardServer()}"
+            android:visibility="@{viewModel.isOpenProductType ? View.VISIBLE : View.GONE}"
+            android:background="@{viewModel.isStandard ? @drawable/bg_dialoguegroup_select : @drawable/transparent_background}"
+            android:clickable="true"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp">
+
+            <ImageView
+                android:id="@+id/standardCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:visibility="@{viewModel.isStandard ? View.VISIBLE : View.INVISIBLE}"
+                android:src="@drawable/icon_dialoguegroup_select"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/itemStandard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/systemsetting_product_type_business"
+                android:textColor="@{viewModel.isStandard ? @color/color04 : @color/text_selector_01}"
+                android:textSize="@dimen/size01"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/standardCheck"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Standard / Enterprise 제품" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--  서버 제품  -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/customServerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:onClick="@{()->viewModel.setCustomServer()}"
+            android:visibility="@{viewModel.isOpenProductType ? View.VISIBLE : View.GONE}"
+            android:background="@{viewModel.isCustomServer ? @drawable/bg_dialoguegroup_select : @drawable/transparent_background}"
+            android:clickable="true"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp">
+
+            <ImageView
+                android:id="@+id/customCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:visibility="@{viewModel.isCustomServer ? View.VISIBLE : View.INVISIBLE}"
+                android:src="@drawable/icon_dialoguegroup_select"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/itemServer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/systemsetting_product_type_server"
+                android:textColor="@{viewModel.isCustomServer ? @color/color04 : @color/text_selector_01}"
+                android:textSize="@dimen/size01"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/customCheck"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="서버 제품" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <include
+            layout="@layout/div_horizon_no_nomargin"
+            android:visibility="@{viewModel.isCustomServer() ? View.VISIBLE : View.GONE}" />
+
+        <!--  접속 URL  -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:visibility="@{viewModel.isCustomServer() ? View.VISIBLE : View.GONE}">
+
+            <TextView
+                android:id="@+id/connectURLTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:focusable="false"
+                android:text="@string/connect_url"
+                android:textColor="@color/text_selector_07"
+                android:textSize="@dimen/size04"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="접속 URL" />
+
+
+            <RadioGroup
+                android:id="@+id/radio_http"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/connectURLTextView">
+
+                <RadioButton
+                    android:id="@+id/httpRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="8dp"
+                    android:button="@null"
+                    app:buttonCompat="@null"
+                    android:drawableLeft="@drawable/radio_selector"
+                    android:checked="@{!viewModel.isHttpsServer()}"
+                    android:drawablePadding="7dp"
+                    android:text="@string/http"
+                    android:textColor="@color/color02"
+                    android:textSize="@dimen/size01"
+                    android:onClick="@{()->viewModel.selectedHttp()}" />
+
+                <RadioButton
+                    android:id="@+id/httpsRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:button="@null"
+                    app:buttonCompat="@null"
+                    android:checked="@{viewModel.isHttpsServer()}"
+                    android:onClick="@{()->viewModel.selectedHttps()}"
+                    android:drawableLeft="@drawable/radio_selector"
+                    android:drawablePadding="7dp"
+                    android:text="@string/https"
+                    android:textColor="@color/color02"
+                    android:textSize="@dimen/size01" />
+            </RadioGroup>
+
+
+            <EditText
+                android:id="@+id/serverURLEditText"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/edittext_height_32"
+                android:layout_marginTop="7dp"
+                android:background="@drawable/input_background"
+                android:inputType="text|textNoSuggestions"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/padding_8"
+                android:paddingRight="@dimen/padding_8"
+                android:textColor="@color/color02"
+                android:textSize="@dimen/size01"
+                android:text="@={viewModel.customServerURL}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/radio_http" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include layout="@layout/div_horizon_no_nomargin" />
+
+
+        <!--  Proxy  -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="10dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp">
+
+            <TextView
+                android:id="@+id/proxyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:text="@string/proxyuse"
+                android:textColor="@color/text_selector_01"
+                android:textSize="@dimen/size01"
+                app:layout_constraintBottom_toBottomOf="@+id/proxyToggleButton"
+                app:layout_constraintEnd_toStartOf="@+id/proxyToggleButton"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/proxyToggleButton"
+                tools:text="프록시 사용" />
+
+            <ImageView
+                android:id="@+id/proxyToggleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:onClick="@{()->viewModel.toggleProxyUse()}"
+                app:switchState="@{viewModel.isUseProxy()}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/toggle_on" />
+
+            <TextView
+                android:id="@+id/proxyServerTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:duplicateParentState="true"
+                android:focusable="false"
+                android:text="@string/proxyaddr"
+                android:textColor="@color/text_selector_07"
+                android:textSize="@dimen/size04"
+                android:visibility="@{viewModel.isUseProxy() ? View.VISIBLE : View.GONE}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/proxyToggleButton"
+                tools:text="서버" />
+
+            <EditText
+                android:id="@+id/proxyAddrEditText"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/edittext_height_32"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/input_background"
+                android:inputType="text|textNoSuggestions"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/padding_8"
+                android:paddingRight="@dimen/padding_8"
+                android:textColor="@color/color02"
+                android:textSize="@dimen/size01"
+                android:visibility="@{viewModel.isUseProxy() ? View.VISIBLE : View.GONE}"
+                android:afterTextChanged="@{()->viewModel.onProxyInfoChanged()}"
+                android:text="@={viewModel.proxyAddress}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/proxyServerTextView" />
+
+
+            <TextView
+                android:id="@+id/proxyPortTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:duplicateParentState="true"
+                android:focusable="false"
+                android:text="@string/proxyport"
+                android:textColor="@color/text_selector_07"
+                android:textSize="@dimen/size04"
+                android:visibility="@{viewModel.isUseProxy() ? View.VISIBLE : View.GONE}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/proxyAddrEditText"
+                tools:text="포트" />
+
+
+            <EditText
+                android:id="@+id/proxyPortEditText"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/edittext_height_32"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/input_background"
+                android:inputType="text|textNoSuggestions"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/padding_8"
+                android:paddingRight="@dimen/padding_8"
+                android:textColor="@color/color02"
+                android:textSize="@dimen/size01"
+                android:visibility="@{viewModel.isUseProxy() ? View.VISIBLE : View.GONE}"
+                android:afterTextChanged="@{()->viewModel.onProxyInfoChanged()}"
+                android:text="@={viewModel.proxyPort}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/proxyPortTextView" />
+
+
+            <TextView
+                android:id="@+id/proxyUserTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:duplicateParentState="true"
+                android:focusable="false"
+                android:text="@string/proxyid"
+                android:textColor="@color/text_selector_07"
+                android:textSize="@dimen/size04"
+                android:visibility="@{viewModel.isUseProxy() ? View.VISIBLE : View.GONE}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/proxyPortEditText"
+                tools:text="사용자 이름" />
+
+
+            <EditText
+                android:id="@+id/proxyUserEditText"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/edittext_height_32"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/input_background"
+                android:inputType="text|textNoSuggestions"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/padding_8"
+                android:paddingRight="@dimen/padding_8"
+                android:textColor="@color/color02"
+                android:textSize="@dimen/size01"
+                android:visibility="@{viewModel.isUseProxy() ? View.VISIBLE : View.GONE}"
+                android:afterTextChanged="@{()->viewModel.onProxyInfoChanged()}"
+                android:text="@={viewModel.proxyUser}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/proxyUserTextView" />
+
+            <TextView
+                android:id="@+id/proxyPwdTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:duplicateParentState="true"
+                android:focusable="false"
+                android:text="@string/proxypassword"
+                android:textColor="@color/text_selector_07"
+                android:textSize="@dimen/size04"
+                android:visibility="@{viewModel.isUseProxy() ? View.VISIBLE : View.GONE}"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/proxyUserEditText"
+                tools:text="암호" />
+
+            <EditText
+                android:id="@+id/proxyPwdEditText"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/edittext_height_32"
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/input_background"
+                android:inputType="text|textNoSuggestions"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/padding_8"
+                android:paddingRight="@dimen/padding_8"
+                android:textColor="@color/color02"
+                android:textSize="@dimen/size01"
+                android:visibility="@{viewModel.isUseProxy() ? View.VISIBLE : View.GONE}"
+                android:afterTextChanged="@{()->viewModel.onProxyInfoChanged()}"
+                android:text="@={viewModel.proxyPassword}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/proxyPwdTextView" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+</layout>

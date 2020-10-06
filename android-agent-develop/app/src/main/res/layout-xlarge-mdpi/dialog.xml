@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dialog_layout"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="@dimen/dialog_max_width"
+    android:maxWidth="@dimen/dialog_max_width"
+    android:minHeight="@dimen/dialog_min_height"
+    android:layout_gravity="center"
+    android:layout_margin="@dimen/margin_16">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="0dip"
+        android:background="@drawable/bg_popup">
+
+        <LinearLayout
+            android:id="@+id/popup_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_popup_header"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvtitle"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/contents_button_height"
+                android:gravity="center_vertical"
+                android:layout_marginLeft="@dimen/margin_16"
+                style="@style/RVDialogTitle" />
+
+            <include layout="@layout/div_horizon_no_nomargin" />
+        </LinearLayout>
+
+        <com.rsupport.mobile.agent.ui.views.BoundedLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/dialog_middle_content"
+            android:minHeight="@dimen/dialog_min_content_height"
+            custom:bounded_width="@dimen/dialog_max_width"
+            custom:bounded_height="@dimen/dialog_list_height"
+            android:orientation="vertical"
+            android:padding="@dimen/padding_22">
+
+            <TextView
+                android:id="@+id/tvcontent"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxWidth="@dimen/dialog_max_width"
+                android:textColor="@color/color14"
+                android:textSize="@dimen/size01" />
+
+            <EditText
+                android:id="@+id/popup_edit"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/edittext_height_32"
+                android:layout_marginTop="@dimen/margin_10"
+                android:padding="@dimen/padding_8"
+                android:textColor="@color/color02"
+                android:textSize="@dimen/size01"
+                android:singleLine="true"
+                android:background="@drawable/bg_input"
+                android:visibility="gone" />
+
+            <ListView
+                android:id="@+id/popup_list"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:listSelector="@color/transparent"
+                android:visibility="gone"></ListView>
+        </com.rsupport.mobile.agent.ui.views.BoundedLinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/line_1"
+            android:layout_marginLeft="@dimen/margin_2"
+            android:layout_marginRight="@dimen/margin_2"
+            android:background="@color/color09"></LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/contents_button_height"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_popup_bottom"
+        android:padding="0dp">
+
+        <TextView
+            android:id="@+id/confirm"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone"
+            android:background="@drawable/dialog_button_confirm"
+            android:clickable="true"
+            style="@style/RVDialog" />
+
+        <TextView
+            android:id="@+id/accept"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone"
+            android:background="@drawable/dialog_button_positive"
+            android:clickable="true"
+            style="@style/RVDialog" />
+
+        <LinearLayout
+            android:id="@+id/div_vertical"
+            android:layout_width="@dimen/line_1"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="@dimen/margin_3"
+            android:orientation="horizontal"
+            android:background="@color/color09"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/reject"
+            android:layout_width="0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="gone"
+            android:background="@drawable/dialog_button_negative"
+            android:clickable="true"
+            style="@style/RVDialog" />
+    </LinearLayout>
+</LinearLayout>

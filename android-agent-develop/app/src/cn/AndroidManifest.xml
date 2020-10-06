@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.rsupport.mobile.agent">
+
+    <application
+        android:icon="@drawable/icon_cn"
+        tools:replace="android:icon,android:name"
+        android:name=".cn.AgentApplication">
+
+        <activity
+            android:name=".cn.ui.dialog.PushNotificationDismissDialog"
+            android:theme="@style/AppCompat.CustomDialog"
+            android:allowTaskReparenting="true"
+            android:configChanges="keyboardHidden|orientation|keyboard|locale|fontScale"
+            android:excludeFromRecents="true"
+            android:launchMode="singleInstance"
+            android:screenOrientation="behind" />
+
+        <receiver
+            android:name=".cn.receiver.UpdateReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_REPLACED" />
+                <data android:scheme="package" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".cn.receiver.AgentBootReceiver"
+            android:enabled="true"
+            android:exported="false"
+            android:label="broadcastReceiverService">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+</manifest>

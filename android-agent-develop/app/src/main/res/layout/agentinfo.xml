@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?><!-- LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/agentinfo_layout"
+	android:layout_width="fill_parent"
+	android:layout_weight="1"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:layout_gravity="center_horizontal"
+	android:visibility="gone"-->
+<com.rsupport.mobile.agent.ui.views.BoundedLinearLayout android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    custom:bounded_width="@dimen/width_644"
+    android:id="@+id/agentinfo_layout"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    android:visibility="visible">
+
+    <RelativeLayout
+        android:id="@+id/agentlayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:duplicateParentState="true"
+        android:layout_marginBottom="@dimen/margin_14">
+
+        <ImageView
+            android:id="@+id/imgagent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="@dimen/margin_4"
+            android:src="@drawable/icon" />
+
+        <LinearLayout
+            android:id="@+id/infolayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_toRightOf="@id/imgagent"
+            android:layout_marginTop="@dimen/margin_10">
+
+            <!-- computer name -->
+
+            <TextView
+                android:id="@+id/tvcomputername"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size01_lineheight"
+                android:layout_marginBottom="@dimen/margin_4"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:textColor="@color/text_selector_01"
+                android:textSize="@dimen/size01"
+                android:textStyle="bold" />
+            <!-- computer os name -->
+
+            <TextView
+                android:id="@+id/tvcomputerosname"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size02_lineheight"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:textColor="@color/text_selector_02"
+                android:textSize="@dimen/size02"
+                android:visibility="gone" />
+            <!-- computer ip -->
+
+            <TextView
+                android:id="@+id/tvcomputerip"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size02_lineheight"
+                android:layout_below="@id/tvcomputerosname"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:textColor="@color/text_selector_02"
+                android:textSize="@dimen/size02" />
+            <!-- computer explain -->
+
+            <TextView
+                android:id="@+id/tvcomputerexplain"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size02_lineheight"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:singleLine="true"
+                android:textColor="@color/color12"
+                android:textSize="@dimen/size02"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_14"
+        android:textSize="@dimen/size01"
+        android:text="@string/agnet_logout_notice"
+        android:textColor="@color/color02"
+        android:id="@+id/text_login_message"
+        android:visibility="visible" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_14"
+        android:textSize="@dimen/size01"
+        android:textColor="@color/color02"
+        android:id="@+id/txt_expired_message"
+        android:visibility="gone" />
+
+
+    <!-- First Box -->
+    <ListView
+        android:id="@+id/agentinfo_list1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        style="@style/RVListViewDialogWhiteGroupTheme" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dialoggroup_bottommargin" />
+
+    <!-- Second Box -->
+    <ListView
+        android:id="@+id/agentinfo_list2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/RVListViewDialogWhiteGroupTheme" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dialoggroup_bottommargin" />
+
+
+</com.rsupport.mobile.agent.ui.views.BoundedLinearLayout>

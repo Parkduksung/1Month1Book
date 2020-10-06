@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff">
+
+    <LinearLayout
+        android:id="@+id/contents_linearlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <FrameLayout
+            android:id="@+id/gallery_layer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.rsupport.mobile.agent.ui.tutorial.TutorialGallery
+                android:id="@+id/introgallery"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fadingEdge="none"
+                android:layout_gravity="center"
+                android:spacing="0dip"
+                android:unselectedAlpha="255" />
+
+            <com.rsupport.mobile.agent.ui.views.BoundedLinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                custom:bounded_width="@dimen/max_width_642"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_20"
+                android:layout_marginRight="@dimen/margin_20">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/img_tutorial01"
+                    android:visibility="invisible" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/margin_10">
+
+                    <Button
+                        android:id="@+id/rvstart"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/contents_button_height"
+                        android:text="@string/tutorial_agent_start"
+                        android:background="@drawable/button_contents"
+                        android:textSize="@dimen/size03"
+                        android:textColor="@color/color04"
+                        android:layout_alignParentBottom="true"
+                        android:focusable="true" />
+                </RelativeLayout>
+            </com.rsupport.mobile.agent.ui.views.BoundedLinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/positionView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/margin_50">
+
+        <ImageView
+            android:id="@+id/index_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/margin_6"
+            android:background="@drawable/img_tutorial_dot" />
+
+        <ImageView
+            android:id="@+id/index_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_6"
+            android:layout_marginRight="@dimen/margin_6"
+            android:background="@drawable/img_tutorial_dot" />
+
+        <ImageView
+            android:id="@+id/index_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_6"
+            android:layout_marginRight="@dimen/margin_6"
+            android:background="@drawable/img_tutorial_dot" />
+
+        <ImageView
+            android:id="@+id/index_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_6"
+            android:layout_marginRight="@dimen/margin_6"
+            android:visibility="gone"
+            android:background="@drawable/img_tutorial_dot" />
+
+        <ImageView
+            android:id="@+id/index_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_6"
+            android:visibility="gone"
+            android:background="@drawable/img_tutorial_dot" />
+    </LinearLayout>
+</RelativeLayout>

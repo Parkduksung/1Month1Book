@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="@dimen/dp_14"
+    android:layout_marginStart="@dimen/dp_14"
+    android:layout_marginLeft="@dimen/dp_14"
+    android:layout_marginRight="@dimen/dp_14"
+    android:layout_marginTop="@dimen/dp_17"
+    tools:context="com.rsupport.mobile.agent.ui.permission.AllowPermissionActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color02"
+        android:textSize="@dimen/size03"
+        android:textStyle="bold"
+        android:text="@string/allow_permission_title" />
+
+    <TextView
+        android:layout_marginTop="@dimen/dp_18"
+        android:id="@+id/des"
+        android:layout_below="@id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/color02"
+        android:textSize="@dimen/size01"
+        android:text="@string/allow_permission_des" />
+
+</RelativeLayout>

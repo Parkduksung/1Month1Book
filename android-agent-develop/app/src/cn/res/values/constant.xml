@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="aboutweblink">https://www.rview.com</string>
+    <string name="mailtofriend_homepage">https://content.rview.com</string>
+    <string name="mailfeedback_to">support.us@rsupport.com</string>
+    <string name="serverip_biz">https://www.rview.com</string>
+    <string name="serverip_personal">https://www.rview.com</string>
+    <string name="faq_website">https://content.rview.com/zh-cn/support/faq/#mobile</string>
+</resources>

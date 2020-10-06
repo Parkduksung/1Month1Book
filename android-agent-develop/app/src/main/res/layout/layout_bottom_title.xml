@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_title_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/contents_button_height"
+    android:layout_marginBottom="@dimen/margin_10"
+    android:layout_marginLeft="@dimen/margin_18"
+    android:layout_marginRight="@dimen/margin_18"
+    android:background="@drawable/button_bottomtitle"
+    android:clickable="true"
+    android:focusable="true"
+    android:onClick="Click_ButtomTitle"
+    android:orientation="horizontal"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/bottom_title_text"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:duplicateParentState="true"
+        android:ellipsize="end"
+
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:textColor="@color/text_selector_09"
+        android:textSize="@dimen/size03" />
+</LinearLayout>

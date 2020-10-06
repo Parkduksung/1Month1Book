@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.rsupport.mobile.agent.ui.settings.delete.AgentDeleteViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color07"
+        android:orientation="vertical"
+        tools:context=".ui.settings.delete.AgentDeleteActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/layout_title" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/dp_18"
+                android:paddingRight="@dimen/dp_18">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="@string/delete_agent_des"
+                    android:textColor="@color/color02"
+                    android:textSize="@dimen/size01" />
+
+                <EditText
+                    android:id="@+id/userid"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/agentinfo_edittext_height"
+                    android:layout_marginTop="17dp"
+                    android:background="@drawable/input_background"
+                    android:hint="@string/msg_inputwebid"
+                    android:inputType="text|textNoSuggestions"
+                    android:lines="1"
+                    android:paddingLeft="@dimen/margin_8"
+                    android:paddingRight="@dimen/margin_8"
+                    android:text="@={viewModel.userId}"
+                    android:textColor="@color/color02"
+                    android:textColorHint="#bababa"
+                    android:textSize="@dimen/size01" />
+
+                <EditText
+                    android:id="@+id/userpasswd"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/agentinfo_edittext_height"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/input_background"
+                    android:hint="@string/password"
+                    android:imeOptions="flagNoExtractUi"
+                    android:inputType="textPassword"
+                    android:lines="1"
+                    android:paddingLeft="@dimen/margin_8"
+                    android:paddingRight="@dimen/margin_8"
+                    android:text="@={viewModel.userPwd}"
+                    android:textColor="@color/color02"
+                    android:textColorHint="#bababa"
+                    android:textSize="@dimen/size01" />
+
+                <Button
+                    android:id="@+id/btn_delete"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/contents_button_height"
+                    android:layout_marginTop="17dp"
+                    android:background="@drawable/button_bottomtitle"
+                    android:clickable="true"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:onClick="@{()->viewModel.deleteAgent()}"
+                    android:text="@string/re_popup_delete"
+                    android:textColor="@color/text_selector_09"
+                    android:textSize="@dimen/size03" />
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+</layout>
