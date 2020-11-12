@@ -1,20 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5aa98b60-91b8-46c4-b03c-ffd5c3122341" name="Default Changelist" comment="" />
+    <list default="true" id="5aa98b60-91b8-46c4-b03c-ffd5c3122341" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../OpenGLBasicSquareTex/OpenGLBasicSquareTex.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../OpenGLBasicSquareTex/app/app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RecyclerView/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StudyNotification/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StudyNotification/app/src/main/java/com/example/study_notification/CommunicateActivity.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StudyNotification/app/src/main/java/com/example/study_notification/CommunicateService.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../StudyNotification/app/src/main/res/layout/communicate_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ArchitectureStudy" beforeDir="false" afterPath="$PROJECT_DIR$/../ArchitectureStudy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CodingTest" beforeDir="false" afterPath="$PROJECT_DIR$/../CodingTest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ExerciseRestaurant" beforeDir="false" afterPath="$PROJECT_DIR$/../ExerciseRestaurant" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JejuNet" beforeDir="false" afterPath="$PROJECT_DIR$/../JejuNet" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NaverMovie" beforeDir="false" afterPath="$PROJECT_DIR$/../NaverMovie" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Portrait-Segmentation" beforeDir="false" afterPath="$PROJECT_DIR$/../Portrait-Segmentation" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RecyclerView/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RecyclerView/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RecyclerView/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../RecyclerView/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StudyAnimation" beforeDir="false" afterPath="$PROJECT_DIR$/../StudyAnimation" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StudyNotification/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../StudyNotification/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StudyNotification/app/src/main/java/com/example/study_notification/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../StudyNotification/app/src/main/java/com/example/study_notification/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StudyTDD" beforeDir="false" afterPath="$PROJECT_DIR$/../StudyTDD" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TensorFlowLite" beforeDir="false" afterPath="$PROJECT_DIR$/../TensorFlowLite" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Tensoroid" beforeDir="false" afterPath="$PROJECT_DIR$/../Tensoroid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-agent" beforeDir="false" afterPath="$PROJECT_DIR$/../android-agent" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-camerax-opengl" beforeDir="false" afterPath="$PROJECT_DIR$/../android-camerax-opengl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-kotlin-notifications" beforeDir="false" afterPath="$PROJECT_DIR$/../android-kotlin-notifications" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-viewer" beforeDir="false" afterPath="$PROJECT_DIR$/../android-viewer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../espresso" beforeDir="false" afterPath="$PROJECT_DIR$/../espresso" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples" beforeDir="false" afterPath="$PROJECT_DIR$/../examples" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1hd1K4G7Bmugj6jDOPPleFZ4XFh" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
@@ -37,13 +74,18 @@
       <screen x="-2560" y="-49" width="2560" height="1337" />
     </state>
     <state x="-1432" y="515" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.23.1440.877/-2560.-49.2560.1337@-2560.-49.2560.1337" timestamp="1600666032515" />
+    <state x="-1722" y="196" key="CommitChangelistDialog2" timestamp="1603790736495">
+      <screen x="-2560" y="-49" width="2560" height="1337" />
+    </state>
+    <state x="-1722" y="196" key="CommitChangelistDialog2/0.23.1440.877/-2560.-49.2560.1337@-2560.-49.2560.1337" timestamp="1603790736495" />
     <state x="-1610" y="452" key="com.intellij.ide.util.TipDialog" timestamp="1600933719411">
       <screen x="-2560" y="-49" width="2560" height="1337" />
     </state>
     <state x="-1610" y="452" key="com.intellij.ide.util.TipDialog/0.23.1440.877/-2560.-49.2560.1337@-2560.-49.2560.1337" timestamp="1600933719411" />
-    <state x="385" y="218" width="695" height="486" key="find.popup" timestamp="1600676112961">
-      <screen x="0" y="23" width="1440" height="877" />
+    <state x="-1876" y="248" width="1236" height="741" key="find.popup" timestamp="1602643727362">
+      <screen x="-2560" y="-49" width="2560" height="1337" />
     </state>
+    <state x="-1876" y="248" width="1236" height="741" key="find.popup/0.23.1440.877/-2560.-49.2560.1337@-2560.-49.2560.1337" timestamp="1602643727362" />
     <state x="385" y="218" width="695" height="486" key="find.popup/0.23.1440.877/-2560.-49.2560.1337@0.23.1440.877" timestamp="1600676112961" />
   </component>
 </project>

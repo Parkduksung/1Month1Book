@@ -13,30 +13,38 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import kotlinx.android.synthetic.main.activity_main.*
 
-@SuppressLint("NewApi")
 class MainActivity : AppCompatActivity() {
 
+//
+//    private val notificationHandler: NotificationHandler by lazy {
+//        NotificationHandler(applicationContext)
+//    }
 
-    private val notificationHandler: NotificationHandler by lazy {
-        NotificationHandler(applicationContext)
-    }
+    private lateinit var click: Click
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
 
-        val notificationManager = NotificationManager()
+//        val notificationManager = NotificationManager()
 
 
         btn_notification.setOnClickListener {
+
+            click = object : Click {
+                override fun click(isClick: Boolean) {
+
+                }
+            }
+            click.click(true)
+
 
 //            createNotificationChannel(application)
 //            notificationHandler.createNotificationChannel("ran", "ran", "ran")
 //            val resultIntent = Intent(this, this@MainActivity::class.java)
 //            notificationHandler.showNotification("이건 연습이에요", resultIntent)
         }
-
     }
 
 //    private fun createNotificationChannel(application: Application) {
@@ -97,9 +105,14 @@ class MainActivity : AppCompatActivity() {
 //        }
 //    }
 //
-//    companion object {
-//
-//        private const val CHANNEL_ID = "channel"
-//    }
+    companion object {
+
+
+        private const val CHANNEL_ID = "channel"
+    }
+}
+
+interface Click {
+    fun click(isClick: Boolean)
 }
 
