@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":EngineManager" external.linked.project.path="$MODULE_DIR$/../../../EngineManager" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="RSEngineManager" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="android-gradle" name="Android-Gradle">
+      <configuration>
+        <option name="GRADLE_PROJECT_PATH" value=":EngineManager" />
+        <option name="LAST_SUCCESSFUL_SYNC_AGP_VERSION" value="3.4.0" />
+        <option name="LAST_KNOWN_AGP_VERSION" value="3.4.0" />
+      </configuration>
+    </facet>
+    <facet type="android" name="Android">
+      <configuration>
+        <option name="SELECTED_BUILD_VARIANT" value="v14Debug" />
+        <option name="ASSEMBLE_TASK_NAME" value="assembleV14Debug" />
+        <option name="COMPILE_JAVA_TASK_NAME" value="compileV14DebugSources" />
+        <afterSyncTasks>
+          <task>generateV14DebugSources</task>
+        </afterSyncTasks>
+        <option name="ALLOW_USER_CONFIGURATION" value="false" />
+        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
+        <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
+        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../EngineManager/src/main/res;file://$MODULE_DIR$/../../../EngineManager/src/v14/res;file://$MODULE_DIR$/../../../EngineManager/src/debug/res;file://$MODULE_DIR$/../../../EngineManager/src/v14Debug/res;file://$MODULE_DIR$/../../../EngineManager/build/generated/res/rs/v14/debug;file://$MODULE_DIR$/../../../EngineManager/build/generated/res/resValues/v14/debug" />
+        <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../EngineManager/src/androidTest/res;file://$MODULE_DIR$/../../../EngineManager/src/androidTestV14/res;file://$MODULE_DIR$/../../../EngineManager/src/androidTestDebug/res;file://$MODULE_DIR$/../../../EngineManager/src/androidTestV14Debug/res;file://$MODULE_DIR$/../../../EngineManager/build/generated/res/rs/androidTest/v14/debug;file://$MODULE_DIR$/../../../EngineManager/build/generated/res/resValues/androidTest/v14/debug" />
+        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
+        <option name="PROJECT_TYPE" value="1" />
+      </configuration>
+    </facet>
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="3" platform="JVM 1.6" allPlatforms="JVM [1.6]" useProjectSettings="false">
+        <compilerSettings />
+        <compilerArguments>
+          <option name="destination" value="$MODULE_DIR$/../../../EngineManager/build/tmp/kotlin-classes/v14Debug" />
+          <option name="classpath" value="$MODULE_DIR$/../../../EngineManager/libs/vncremote.jar:/Users/parkduksung/.gradle/caches/transforms-2/files-2.1/672c9b8919da98e5865a4981f08f9ea0/jars/classes.jar:/Users/parkduksung/.gradle/caches/transforms-2/files-2.1/ce94e64e69ee69c65facb7e867f60553/jars/classes.jar:/Users/parkduksung/.gradle/caches/transforms-2/files-2.1/ce94e64e69ee69c65facb7e867f60553/jars/libs/supportlib.jar:/Users/parkduksung/.gradle/caches/transforms-2/files-2.1/2848dd8dcf153a32662af0131bc0dcf7/jars/classes.jar:/Users/parkduksung/.gradle/caches/transforms-2/files-2.1/cb19c80d39733aaa04335815aad11dd2/jars/classes.jar:/Users/parkduksung/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.3.10/b178c1501609c6e4ee8be635513cb023a466457d/kotlin-stdlib-1.3.10.jar:/Users/parkduksung/.gradle/caches/transforms-2/files-2.1/57d2f1baf70b006f01adc343fc5ffeef/jars/classes.jar:/Users/parkduksung/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.4/695b63d702f505b9b916e02272e3b6381bade7f/gson-2.4.jar:/Users/parkduksung/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.3.10/1b19d99229dcedad7caf50534dce38fe82845269/kotlin-stdlib-common-1.3.10.jar:/Users/parkduksung/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar:/Users/parkduksung/Library/Android/sdk/platforms/android-29/android.jar" />
+          <option name="noStdlib" value="true" />
+          <option name="noReflect" value="true" />
+          <option name="moduleName" value="EngineManager_v14Debug" />
+          <option name="languageVersion" value="1.3" />
+          <option name="apiVersion" value="1.3" />
+          <option name="pluginOptions">
+            <array>
+              <option value="plugin:org.jetbrains.kotlin.android:experimental=false" />
+              <option value="plugin:org.jetbrains.kotlin.android:enabled=true" />
+              <option value="plugin:org.jetbrains.kotlin.android:defaultCacheImplementation=hashMap" />
+            </array>
+          </option>
+          <option name="pluginClasspaths">
+            <array>
+              <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-android-extensions/1.3.10/b714dd6deb5282a6545e4183d9270860a171f08e/kotlin-android-extensions-1.3.10.jar" />
+            </array>
+          </option>
+          <option name="errors">
+            <ArgumentParseErrors />
+          </option>
+        </compilerArguments>
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
+    <output url="file://$MODULE_DIR$/../../../EngineManager/build/intermediates/javac/v14Debug/compileV14DebugJavaWithJavac/classes" />
+    <output-test url="file://$MODULE_DIR$/../../../EngineManager/build/intermediates/javac/v14DebugUnitTest/compileV14DebugUnitTestJavaWithJavac/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../EngineManager">
+      <sourceFolder url="file://$MODULE_DIR$/../../../EngineManager/src/main/aidl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../EngineManager/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../EngineManager/src/main/rsperm" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../EngineManager/src/androidTest/java" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/../../../EngineManager/src/main/res" type="java-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../EngineManager/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../EngineManager/build" />
+    </content>
+    <orderEntry type="jdk" jdkName="Android API 29 Platform" jdkType="Android SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Gradle: ./EngineManager/libs/vncremote.jar" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.3.10" level="project" />
+    <orderEntry type="library" name="Gradle: com.google.code.gson:gson:2.4" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.3.10" level="project" />
+    <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
+    <orderEntry type="library" name="Gradle: com.rsupport.android.mobizen.engine:installer:4.1.2.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.rsupport.android.mobizen:injection:0.1.1@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.rsupport.android.injection:input:4.1.0.2@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.rsupport.android.remotecall:imageprocessing:1.0.3@aar" level="project" />
+    <orderEntry type="library" name="Gradle: com.rsupport.android.mobizen.util:rslog:4.1.0.1@aar" level="project" />
+  </component>
+</module>
