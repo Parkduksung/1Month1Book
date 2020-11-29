@@ -188,13 +188,13 @@ object Part2 {
     }
 
     // kotlin 에서는 override 키워드 반드시 붙여줘야 한다.
-    fun overriding(){
+    fun overriding() {
 
-        open class AAA{
+        open class AAA {
             open fun func() = Log.d("결과", "AAA")
         }
 
-        class BBB : AAA(){
+        class BBB : AAA() {
             final override fun func(): Int {
                 super.func()
                 return Log.d("결과", "BBB")
@@ -218,10 +218,72 @@ object Part2 {
     //어떤 클래스가 아무 클래스도 상속하지 않으면 자동으로 Any 라는 클래스를 상속한다. 다른 클래스를 상속한다 해도 그 클래스 또한 Any 클래스를 자동으로 상속하므로
     //간접적으로 Any 클래스를 상속하게 된다.
     // 즉, 모든 코틀린 클래스들은 Any 클래스를 상속한다는 것이 보장된다.
-    fun anyClass(){
+    fun anyClass() {
 
     }
 
+    //엘비스 연산자는 왼쪽의 피연사자가 null이 아니면 그 값을 그대로 쓰고, null 이면 우측의 피연산자로 대체하는 매우 유용한 연산자이다.
+    fun elvisOperator() {
+
+        // null 이 존재할수 있을때 사용하면 좀더 직관적으로 보일려나..?
+
+        val count: Int? = null
+
+        count?.let { Log.d("결과", it.toString()) } ?: Log.d("결과", "null 이야")
+    }
+
+
+    // 접근한정자인데 그냥 다시한번 알아두는게 좋을거 같아서..
+    fun protected() {
+
+        open class Person(protected val name: String, protected val age: Int)
+
+
+        class Student(name: String, age: Int) : Person(name, age) {
+
+            fun printName() {
+                Log.d("결과", name)
+            }
+        }
+
+        val student = Student("박덕성", 29)
+        student.printName()
+    }
+
+
+    // 진짜 자주 사용하면 편리하지.. 매번 상속해서 사용하는게 아니고 리시버타입에 . 붙여서 사용만 하면 되니까..
+    fun extensionFunction() {
+
+        fun String.isNumber(): Boolean {
+
+            var i = 0
+
+            this.forEach {
+                if (!it.isDigit()) {
+                    i += 1
+                }
+            }
+            return i == 0
+        }
+
+
+        val exampleString1 = "1234095"
+        val exampleString2 = "1v23409e5"
+
+        Log.d("결과", exampleString1.isNumber().toString())
+        Log.d("결과", exampleString2.isNumber().toString())
+    }
+
+
+    // 함수 말고 변수로도 확장할 수 있다.
+    fun extensionProperty() {
+
+        Log.d("결과", "exampleString12341234".isLarge.toString())
+        Log.d("결과", "exam".isLarge.toString())
+    }
+
+    private val String.isLarge: Boolean
+        get() = this.length >= 10
 
 }
 
