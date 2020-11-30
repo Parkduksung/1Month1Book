@@ -23,6 +23,7 @@ class DoitMission11 : BaseActivity<DoitMission11Binding>(R.layout.doit_mission_1
             Log.d("영역:메세지보냄", binding.inputServiceMessage.text.toString())
         }
 
+
     }
 
     override fun onNewIntent(intent: Intent?) {
