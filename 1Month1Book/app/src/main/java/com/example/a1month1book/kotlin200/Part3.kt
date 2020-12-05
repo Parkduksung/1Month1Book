@@ -119,9 +119,116 @@ object Part3 {
         Log.d("결과", salary.toString())
 
     }
+
     data class Employee(val name: String, val age: Int, val salary: Int)
 
 
+    //여기서부터는 조금 중요하다 생각하는 부분임..
+
+    // 일단 해석이 중요함.
+    // (Int) -> Unit  : 매개변수가 int 타입이고 반환타입이 Unit 인 함수를 저장할 수 있는 타입! 이런타입을 함수타입이라 함.
+    //
+
+    // 상수 vs 리터럴
+    //상수는 변하지 않는 변수를 의미하며(메모리 위치) 메모리 값을 변경할 수 없다.
+    //리터럴은 변수의 값이 변하지 않는 데이터(메모리 위치안의 값)를 의미한다.
+    fun literalAndLambda() {
+
+        val instantFunc: (Int?) -> Unit
+        instantFunc =
+            { number: Int? ->         // 지금 이부분이 함수 리터럴이다. 말그대로 함수를 나타내는 리터럴. 리터럴이란말은 문자그래로의 라고 해석되는데 그냥 문자? 라고 생각해도 될련지..
+                Log.d(
+                    "결과",
+                    "$number"
+                ) // 리터럴이란 데이터라고 생각하면 이해가 쉽겠고 val int = 1 일때 1이 리터럴이고 이는 변하지 않는 데이터값을 리터럴이라고 한다.
+            } // 해석 : instantFunc 참조 변수에 (Int) -> Unit 타입의 함수가 저장된다. 즉 참조변수가 가리키는 함수를 호출하고 있다. 함수타입은 참조타입이므로 위치를 가리키는 형태로 저장됨 스택x
+        // 함수를 담고 있는 변수는 마치 함수인 것처럼 호출할 수 있다.
+        // 함수 리터럴에는 return 을 적지 않는다. 함수 리터럴의 반환 값은 함수 내용의 맨 마지막 표현식이 된다.
+
+
+        // 일반적으로 () 로 바로 호출하면 되지만 변수가 Nullable 일때는 invoke 를 통해서 Null 처리를 하면 된다.
+
+        instantFunc(33)
+        instantFunc.invoke(33)
+
+        // { 매개변수 -> 반환 값 } 형태를 람다식이라고 한다.
+
+
+    }
+
+    //익명함수.
+    // 위와 비슷함. 단 return으로 반환값을 직접 지정해 줄 수 있다.
+    fun anonymousFunction() {
+
+        val instantFunc: (Int) -> Unit = {
+            Log.d("결과", it.toString())
+        }
+
+        val instantFunc1: (Int) -> Unit = fun(number: Int): Unit {
+            Log.d("결과", number.toString())
+        }
+
+    }
+
+    //함수참조.
+    // 함수 타입의 변수는 이미 선언되어 있는 함수나 객체의 멤버 함수를 가리킬 수도 있다.
+    // 함수 이름 앞에 :: 를 붙이면 표현식의 값은 그 함수의 참조값이 되며, 타입은 그 함수의 시그니처에 맞는 함수 타입이 된다.
+    fun functionReference() {
+        var instantFunc: (Int, Int) -> Int
+        instantFunc = ::plus
+        instantFunc(60, 27)
+
+        instantFunc = Object::minus
+        instantFunc(36, 13)
+
+        instantFunc = Class()::average
+        instantFunc(25, 15)
+    }
+
+    fun plus(a: Int, b: Int) = Log.d("결과", "${a + b}")
+
+    object Object {
+        fun minus(a: Int, b: Int) = Log.d("결과", "${a - b}")
+    }
+
+    class Class {
+        fun average(a: Int, b: Int) = Log.d("결과", "${(a + b) / 2}")
+    }
+
+
+    // 클로저
+    // 선언될 당시의 상황을 기억하는 함수인 클로저.
+    // ex) () -> Unit
+
+    fun closure() {
+
+        val f: () -> Unit = returnFunc(30)
+        f()
+    }
+
+    private fun returnFunc(i: Int): () -> Unit = {
+        println(i)
+    }
+    // f 호출 시점 -> i 매개변수가 이미 사라지고 없다. => returnFunc 함수가 끝나는 순간 num 매개변수는 소멸하기 때문 => 근데 어떻게 가능함?
+    //=> 함수 리터럴이 자신이 만들어질때의 상황을 기억하고 있음. 205~206 line 에서 함수리터럴이 만들어지는 순간 자기 주변 상황을 함께 저장함.
+    // i 매개변수값을 복사해 가지고 있음.
+
+
+    // 함수 리터럴에 리시버를 적용하여 확장함수처럼 가능함. 개꿀
+    fun functionLiteralWithReceiver(){
+
+        val makeSure:Int.(left:Int, right:Int) -> Int
+
+        makeSure = { left: Int, right: Int ->
+            when {
+                this < left -> left
+                this > right -> right
+                else -> this
+            }
+        }
+
+        Log.d("결과" , 30.makeSure(15,40).toString())
+    }
 
 }
 
