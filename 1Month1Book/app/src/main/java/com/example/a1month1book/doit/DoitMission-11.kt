@@ -8,6 +8,8 @@ import android.util.Log
 import com.example.a1month1book.R
 import com.example.a1month1book.base.BaseActivity
 import com.example.a1month1book.databinding.DoitMission11Binding
+import com.example.a1month1book.kotlin200.Part3
+import java.lang.Exception
 
 class DoitMission11 : BaseActivity<DoitMission11Binding>(R.layout.doit_mission_11) {
 
@@ -23,6 +25,15 @@ class DoitMission11 : BaseActivity<DoitMission11Binding>(R.layout.doit_mission_1
             Log.d("영역:메세지보냄", binding.inputServiceMessage.text.toString())
         }
 
+
+        try {
+            Log.d("결과", "try")
+            throw Exception()
+        }catch (e : Exception){
+            Log.d("결과", "catch")
+        }finally {
+            Log.d("결과", "finally")
+        }
 
     }
 

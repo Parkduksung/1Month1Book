@@ -215,9 +215,9 @@ object Part3 {
 
 
     // 함수 리터럴에 리시버를 적용하여 확장함수처럼 가능함. 개꿀
-    fun functionLiteralWithReceiver(){
+    fun functionLiteralWithReceiver() {
 
-        val makeSure:Int.(left:Int, right:Int) -> Int
+        val makeSure: Int.(left: Int, right: Int) -> Int
 
         makeSure = { left: Int, right: Int ->
             when {
@@ -227,7 +227,39 @@ object Part3 {
             }
         }
 
-        Log.d("결과" , 30.makeSure(15,40).toString())
+        Log.d("결과", 30.makeSure(15, 40).toString())
+    }
+
+    //Generic , 제네릭
+    private fun <T> toFunction(value: T): () -> T = { value }
+
+    fun generic() {
+
+        // T 라는게 어떤 타입이 들어올지는 모르는 매개변수를 타입 매개변수라고 한다.
+        // 보면은 value 에 int 형이 들어오면 ()->Int 형태로 되고 String 으로 되면 ()->String 으로 된다.
+        val toFunctionInt = toFunction(1024)
+        val toFunctionString = toFunction("1024")
+
+        Log.d("결과 ", "${toFunctionInt.invoke()}")
+        Log.d("결과", toFunctionString.invoke())
+
+    }
+
+    //제네릭의 확장. 타입 매개변수를 여러개 선언하는 방법.
+    // 여기서 this 는 receiver
+    private fun <T, R> T.map(mapper: (T) -> R): R {
+        return mapper(this)
+    }
+
+    fun genericPlus() {
+
+        val square11: Int =
+            11.map {
+                it * it
+            }
+
+        Log.d("결과", square11.toString())
+
     }
 
 }
