@@ -1,0 +1,184 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+apply plugin: 'findbugs'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion '29.0.2'
+
+    // Needed to publish all variants
+    publishNonDefault true
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 21
+        versionName VERSION_NAME
+        buildConfigField "boolean", "IS_MIRRORING", "false"
+        buildConfigField "boolean", "IS_TAAS", "false"
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    flavorDimensions "engineManager"
+
+    sourceSets {
+        main{
+            java.srcDirs = ['./src/main/java', './src/main/rsperm']
+            manifest.srcFile './src/main/AndroidManifest.xml'
+        }
+
+        v14{
+            jniLibs.srcDirs = ['./src/main_v14/jniLibs']
+        }
+
+        v14m{
+            jniLibs.srcDirs = ['./src/main_v14_m/jniLibs']
+        }
+
+        v14t{
+            jniLibs.srcDirs = ['./src/main_v14/jniLibs']
+        }
+
+        v19rec{
+            jniLibs.srcDirs = ['./src/main_v19_rec/jniLibs']
+        }
+    }
+
+    productFlavors{
+        v18{
+            dimension "engineManager"
+        }
+        v14{
+            dimension "engineManager"
+        }
+        v14m{
+            buildConfigField "boolean", "IS_MIRRORING", "true"
+            dimension "engineManager"
+        }
+        v14t{
+            buildConfigField "boolean", "IS_TAAS", "true"
+            dimension "engineManager"
+        }
+        v19rec{
+            dimension "engineManager"
+        }
+    }
+}
+
+repositories{
+    maven{
+        url SNAPSHOT_URL
+    }
+
+    maven{
+        url RELEASE_URL
+    }
+}
+
+dependencies {
+    api files('libs/vncremote.jar')
+
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.3.10'
+
+    api 'com.rsupport.android.mobizen.engine:installer:4.1.2.1'
+
+    api 'com.rsupport.android.mobizen:injection:0.1.1'
+
+    api 'com.rsupport.android.injection:input:4.1.0.2'
+
+    api 'com.rsupport.android.remotecall:imageprocessing:1.0.3'
+//    api project(':Inject')
+}
+
+apply plugin: 'maven-publish'
+
+publishing {
+    repositories {
+        maven {
+            url RELEASE_URL
+            credentials {
+                username USER_NAME
+                password USER_PWD
+            }
+        }
+    }
+
+    publications {
+        v14(MavenPublication) {
+            artifactId "manager"
+            groupId "com.rsupport.android.mobizen.engine"
+            version VERSION_NAME + "-v14"
+            artifacts = ["$buildDir/outputs/aar/${project.name}-v14-release.aar"]
+        }
+
+        v18(MavenPublication) {
+            artifactId "manager"
+            groupId "com.rsupport.android.mobizen.engine"
+            version VERSION_NAME + "-v18"
+            artifacts = ["$buildDir/outputs/aar/${project.name}-v18-release.aar"]
+        }
+
+        v14m(MavenPublication) {
+            artifactId "manager"
+            groupId "com.rsupport.android.mobizen.engine"
+            version VERSION_NAME + "-v14m"
+            artifacts = ["$buildDir/outputs/aar/${project.name}-v14m-release.aar"]
+        }
+
+        v14t(MavenPublication) {
+            artifactId "manager"
+            groupId "com.rsupport.android.mobizen.engine"
+            version VERSION_NAME + "-v14t"
+            artifacts = ["$buildDir/outputs/aar/${project.name}-v14t-release.aar"]
+        }
+
+        v19rec(MavenPublication) {
+            artifactId "manager"
+            groupId "com.rsupport.android.mobizen.engine"
+            version VERSION_NAME + "-v19rec"
+            artifacts = ["$buildDir/outputs/aar/${project.name}-v19rec-release.aar"]
+            createDependencies(pom)
+        }
+    }
+}
+
+task releaseEngineManager {
+    group 'releaseLibrary'
+    dependsOn 'publish'
+
+    publish.dependsOn 'assembleRelease'
+}
+
+def createDependencies(org.gradle.api.publish.maven.MavenPom pom){
+    //Iterate over the compile dependencies, adding a <dependency> node for each
+    pom.withXml {
+
+        def dependenciesNode = asNode().appendNode('dependencies')
+
+        addDependencies(dependenciesNode, configurations.api.allDependencies)
+        addDependencies(dependenciesNode, configurations.implementation.allDependencies)
+    }
+}
+
+def addDependencies(Node dependencyNodes, DependencySet depSet){
+    depSet.each {
+        if (it.group == null || it.version == null || it.name == null || it.name == "unspecified")
+            return // ignore invalid dependencies
+
+        def dependency = dependencyNodes.appendNode('dependency')
+        dependency.appendNode('groupId', it.group)
+        dependency.appendNode('artifactId', it.name)
+        dependency.appendNode('version', it.version)
+    }
+}

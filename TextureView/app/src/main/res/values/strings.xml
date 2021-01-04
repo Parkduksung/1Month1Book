@@ -1,0 +1,4 @@
+<resources>
+	<string name="app_name">TextureView</string>
+    <string name="permission_required">Camera permission required to run application.</string>
+</resources>

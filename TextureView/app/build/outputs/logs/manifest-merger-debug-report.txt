@@ -1,0 +1,107 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:2:1-23:12
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d1fc058d0daf1e1922f76b4ca458ad48/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/292ae207cbf9d6807d5275c95a8abf4b/AndroidManifest.xml:2:1-11:12
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/32f982c1ba58c201e99f7cd113507d52/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/8970ca6396594d022994f47050092030/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/a49a2462cff8958c1b267fa2a2a8844c/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/ee30db47d6543c402316a7b54c2c1e3f/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/ef13b21b9d7f78a52041045419e67f28/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.1.1] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/226e2d13170324335ed5a8ec710263c6/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/cd88db260004cde5a7b32e56cf404777/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/2b7c74169f5298dd75ee5fd1efbb78c1/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/23e42390df982eb5b80fe28944f112aa/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.0] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/e77ce4260d4bc6f94c704db32478b0d6/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:2:1-23:12
+INJECTED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:2:1-23:12
+	package
+		ADDED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:2:11-49
+		INJECTED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml
+		ADDED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:2:1-23:12
+		INJECTED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml
+		ADDED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:2:1-23:12
+		INJECTED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:3:5-63
+uses-permission#android.permission.CAMERA
+ADDED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:5:2-61
+	android:name
+		ADDED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:5:19-59
+application
+ADDED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:7:2-21:16
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/292ae207cbf9d6807d5275c95a8abf4b/AndroidManifest.xml:9:5-20
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/292ae207cbf9d6807d5275c95a8abf4b/AndroidManifest.xml:9:5-20
+	android:supportsRtl
+		ADDED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:12:3-29
+	android:label
+		ADDED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:10:3-35
+	android:roundIcon
+		ADDED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:11:3-48
+	android:icon
+		ADDED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:9:3-37
+	android:allowBackup
+		ADDED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:8:3-29
+	android:theme
+		ADDED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:13:3-34
+activity#com.tutorialwing.textureview.MainActivity
+ADDED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:14:3-20:14
+	android:name
+		ADDED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:14:13-41
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:15:4-19:20
+action#android.intent.action.MAIN
+ADDED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:16:5-56
+	android:name
+		ADDED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:16:13-54
+category#android.intent.category.LAUNCHER
+ADDED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:18:5-64
+	android:name
+		ADDED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml:18:15-62
+uses-sdk
+INJECTED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml
+INJECTED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d1fc058d0daf1e1922f76b4ca458ad48/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.1.1] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.1.1.aar/d1fc058d0daf1e1922f76b4ca458ad48/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/292ae207cbf9d6807d5275c95a8abf4b/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support.constraint:constraint-layout:1.1.2] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.1.2.aar/292ae207cbf9d6807d5275c95a8abf4b/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/32f982c1ba58c201e99f7cd113507d52/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.1.1] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/support-fragment-27.1.1.aar/32f982c1ba58c201e99f7cd113507d52/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/8970ca6396594d022994f47050092030/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.1.1] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.1.1.aar/8970ca6396594d022994f47050092030/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/a49a2462cff8958c1b267fa2a2a8844c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.1.1] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.1.1.aar/a49a2462cff8958c1b267fa2a2a8844c/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/ee30db47d6543c402316a7b54c2c1e3f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.1.1] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.1.1.aar/ee30db47d6543c402316a7b54c2c1e3f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/ef13b21b9d7f78a52041045419e67f28/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.1.1] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.1.1.aar/ef13b21b9d7f78a52041045419e67f28/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/226e2d13170324335ed5a8ec710263c6/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.1.1] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/support-compat-27.1.1.aar/226e2d13170324335ed5a8ec710263c6/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/cd88db260004cde5a7b32e56cf404777/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.0] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/livedata-core-1.1.0.aar/cd88db260004cde5a7b32e56cf404777/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/2b7c74169f5298dd75ee5fd1efbb78c1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.0] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/viewmodel-1.1.0.aar/2b7c74169f5298dd75ee5fd1efbb78c1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/23e42390df982eb5b80fe28944f112aa/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.0] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/23e42390df982eb5b80fe28944f112aa/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/e77ce4260d4bc6f94c704db32478b0d6/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.0] /Users/parkduksung/.gradle/caches/transforms-1/files-1.1/runtime-1.1.0.aar/e77ce4260d4bc6f94c704db32478b0d6/AndroidManifest.xml:20:5-44
+INJECTED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml
+INJECTED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml
+		ADDED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml
+		ADDED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/parkduksung/AndroidStudioProjects/TextureView/app/src/main/AndroidManifest.xml

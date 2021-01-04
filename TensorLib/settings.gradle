@@ -1,0 +1,3 @@
+include ':tensor'
+include ':app'
+rootProject.name = "TensorLib"

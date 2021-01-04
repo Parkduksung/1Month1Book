@@ -1,0 +1,81 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rsupport.android.engine">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!--Self Permission-->
+    <!--&lt;!&ndash; OPPO 단말기에서 frame_buffer권한의 획득을 위하여 사용함 &ndash;&gt;-->
+    <!--&lt;!&ndash; android:sharedUserId="android.uid.system" &ndash;&gt;-->
+
+    <!--&lt;!&ndash; 1.1.0.2 (Build 203) : 하위버전의 UI모듈 bind시 Fail 메시지를 리턴하도록 수정 &ndash;&gt;-->
+    <!--&lt;!&ndash; 1.1.0.2 (Build 202) : logcat 기능을 위한 getFile() 메소드 추가 &ndash;&gt;-->
+    <!--&lt;!&ndash; 1.1.0.1 (Build 201) : 이전 rsperm 과 v2와의 구분을 위해 버전명을 변경함. &ndash;&gt;-->
+
+    <!--<uses-sdk android:minSdkVersion="8" android:targetSdkVersion="21"/>-->
+
+    <!--&lt;!&ndash; [P]SDK19+, For sound redirection of wifi-display &ndash;&gt;-->
+    <!--<uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT" />-->
+
+    <!--&lt;!&ndash; 19+, create a  public virtual display. &ndash;&gt;-->
+    <!--<uses-permission android:name="android.permission.CAPTURE_VIDEO_OUTPUT" />-->
+    <!--<uses-permission android:name="android.permission.CAPTURE_SECURE_VIDEO_OUTPUT" />-->
+
+
+    <!--&lt;!&ndash;  for network &ndash;&gt;-->
+    <!--<uses-permission android:name="android.permission.INTERNET" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />-->
+    <!--<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />-->
+
+    <!--&lt;!&ndash;  [P]for virtual disp on 19+/screenshot &ndash;&gt;-->
+    <!--<uses-permission android:name="android.permission.ACCESS_SURFACE_FLINGER" />-->
+    <!--<uses-permission android:name="android.permission.READ_FRAME_BUFFER" />-->
+
+    <!--&lt;!&ndash;  [P]for input &ndash;&gt;-->
+    <!--<uses-permission android:name="android.permission.INJECT_EVENTS" />-->
+    <!--<uses-permission android:name="android.permission.DEVICE_POWER" />-->
+    <!--&lt;!&ndash; [P]4.1+, To get other app's log &ndash;&gt;-->
+    <!--<uses-permission android:name="android.permission.READ_LOGS"/>-->
+
+    <!--&lt;!&ndash; for litecam file write &ndash;&gt;-->
+    <!--<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>-->
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>-->
+
+    <!--&lt;!&ndash; for mike sound capture &ndash;&gt;-->
+    <!--<uses-permission android:name="android.permission.RECORD_AUDIO" />-->
+
+    <!--<uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>-->
+    <!--<uses-permission android:name="android.permission.WRITE_SETTINGS"/>-->
+
+    <application
+        android:allowBackup="true">
+
+        <!-- Declaring maximum aspect ratio -->
+        <meta-data android:name="android.max_aspect" android:value="3.0" />
+
+        <!-- Projection Activity -->
+        <activity android:name="com.rsupport.rsperm.projection.ProjectionActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|locale|fontScale|screenSize|screenLayout|navigation|layoutDirection"
+            android:screenOrientation="behind"
+            android:taskAffinity=""
+            android:allowTaskReparenting="true"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.CustomDialog">
+        </activity>
+
+        <service
+            android:name="com.rsupport.srn30.ScreenService"
+            android:configChanges="keyboardHidden|orientation|keyboard|locale|fontScale|screenSize|screenLayout|navigation|layoutDirection"
+            android:exported="false"
+            >
+        </service>
+
+        <!--For samsung-->
+        <!--<service-->
+            <!--android:name="com.rsupport.rsperm.i"-->
+            <!--android:exported="false"-->
+            <!-->-->
+        <!--</service>-->
+
+        <!-- rotation marker service -->
+        <service android:name="com.rsupport.hwrotation.MarkerService" android:exported="false"/>
+    </application>
+</manifest>
