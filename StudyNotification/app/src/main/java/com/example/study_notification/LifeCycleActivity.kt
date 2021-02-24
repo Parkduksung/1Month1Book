@@ -44,4 +44,19 @@ class LifeCycleActivity : AppCompatActivity() {
         Log.d("생명주기순서", "onSaveInstanceState")
         super.onSaveInstanceState(outState, outPersistentState)
     }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        Log.d("생명주기순서", "onSaveInstanceState")
+        super.onSaveInstanceState(outState)
+    }
+
+    override fun onPause() {
+        Log.d("생명주기순서", "onPause")
+        super.onPause()
+    }
+
+    override fun onDestroy() {
+        Log.d("생명주기순서", "onDestroy")
+        super.onDestroy()
+    }
 }
