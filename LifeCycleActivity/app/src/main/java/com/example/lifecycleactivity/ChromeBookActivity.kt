@@ -17,6 +17,17 @@ class ChromeBookActivity : AppCompatActivity() {
 
         Log.d("결과", "ChromeBookActivity onCreate")
 
+        if (packageManager.hasSystemFeature("org.chromium.arc.device_management")) {
+            Log.d("결과", "크름북 0")
+        } else {
+            Log.d("결과", "크름북 X")
+        }
+
+    }
+
+    override fun onStart() {
+        Log.d("결과", "ChromeBookActivity onStart")
+        super.onStart()
     }
 
     override fun onResume() {
