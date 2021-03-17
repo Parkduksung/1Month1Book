@@ -49,6 +49,7 @@ class ChromeBookActivity : AppCompatActivity() {
 
         binding.intentButton.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
 
     }
