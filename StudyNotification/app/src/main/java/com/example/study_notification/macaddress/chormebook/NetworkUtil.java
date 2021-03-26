@@ -1,8 +1,19 @@
 package com.example.study_notification.macaddress.chormebook;
 
+import android.content.Context;
+import android.net.wifi.WifiManager;
+import android.os.Build;
+import android.provider.SyncStateContract;
+import android.text.TextUtils;
+import android.util.Log;
+
 import java.net.NetworkInterface;
+import java.net.SocketException;
 import java.util.Collections;
+import java.util.Enumeration;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class NetworkUtil {
 //    public static String getLocalIP() {
@@ -78,58 +89,58 @@ public class NetworkUtil {
 //        return false;
 //    }
 //
-//    /**
-//     * MAC 주소 조회. Android M 부터 WifiManager 를 통한 MAC 주소 조회 불가.
-//     * 대체방법으로 Network interface 목록에서 wlan0 이름을 가진 장치의 MAC 을 조회하는것으로 처리되고 있었으나,
-//     * 가져오지 못하는 경우(단말)이 있어, API가 지원되지 않는 경우는 MAC 주소를 임의 생성한 값으로 대체하는것으로 처리할것.
-//     * 조회되지 않는 경우에 API에서의 반환값은 02:00:00:00:00:00 이다.
-//     *
-//     * 본 메소드에서는 구분자를 제외하고 12자리로 반환한다.
-//     *
-//     * @param context
-//     * @return
-//     */
-//    public static String getMacAddress(Context context) {
-//        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-//            //WifiManager를 통한 MAC 조회 불가
-//            return getWifiMacAddress();
-//        }
-//
-//        WifiManager wifiManager = (WifiManager)context.getSystemService(Context.WIFI_SERVICE);
-//
-//        if (wifiManager == null) return "";
-//
-//        String macAddress = "";
-//
-//        try {
-//
-//            macAddress = wifiManager.getConnectionInfo().getMacAddress();
-//
-//            if (macAddress == null &&
-//                    !wifiManager.isWifiEnabled() &&
-//                    (SettingPref.getInstance().productType != Enums.ProductType.STANDARD)) {
-//
-//                wifiManager.setWifiEnabled(true);
-//                macAddress = wifiManager.getConnectionInfo().getMacAddress();
-//                wifiManager.setWifiEnabled(false);
-//            }
-//
-//            if(macAddress != null) {
-//                macAddress = macAddress.toUpperCase();
-//
-//                //구분자 제거하고 반환
-//                Pattern p = Pattern.compile("([0-9A-F]{2}).([0-9A-F]{2}).([0-9A-F]{2}).([0-9A-F]{2}).([0-9A-F]{2}).([0-9A-F]{2})");
-//                Matcher m = p.matcher(macAddress);
-//                if(m.matches()) {
-//                    macAddress = String.format("%s%s%s%s%s%s", m.group(1), m.group(2), m.group(3), m.group(4), m.group(5), m.group(6));
-//                }
-//            }
-//        } catch (NullPointerException e) {
-//            e.printStackTrace();
-//        }
-//
-//        return (macAddress == null) ? "" : macAddress;
-//    }
+
+    /**
+     * MAC 주소 조회. Android M 부터 WifiManager 를 통한 MAC 주소 조회 불가.
+     * 대체방법으로 Network interface 목록에서 wlan0 이름을 가진 장치의 MAC 을 조회하는것으로 처리되고 있었으나,
+     * 가져오지 못하는 경우(단말)이 있어, API가 지원되지 않는 경우는 MAC 주소를 임의 생성한 값으로 대체하는것으로 처리할것.
+     * 조회되지 않는 경우에 API에서의 반환값은 02:00:00:00:00:00 이다.
+     * <p>
+     * 본 메소드에서는 구분자를 제외하고 12자리로 반환한다.
+     *
+     * @param context
+     * @return
+     */
+    public static String getMacAddress(Context context) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            //WifiManager를 통한 MAC 조회 불가
+            return getWifiMacAddress();
+        }
+
+        WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+
+        if (wifiManager == null) return "";
+
+        String macAddress = "";
+
+        try {
+
+            macAddress = wifiManager.getConnectionInfo().getMacAddress();
+
+            if (macAddress == null &&
+                    !wifiManager.isWifiEnabled()) {
+
+                wifiManager.setWifiEnabled(true);
+                macAddress = wifiManager.getConnectionInfo().getMacAddress();
+                wifiManager.setWifiEnabled(false);
+            }
+
+            if (macAddress != null) {
+                macAddress = macAddress.toUpperCase();
+
+                //구분자 제거하고 반환
+                Pattern p = Pattern.compile("([0-9A-F]{2}).([0-9A-F]{2}).([0-9A-F]{2}).([0-9A-F]{2}).([0-9A-F]{2}).([0-9A-F]{2})");
+                Matcher m = p.matcher(macAddress);
+                if (m.matches()) {
+                    macAddress = String.format("%s%s%s%s%s%s", m.group(1), m.group(2), m.group(3), m.group(4), m.group(5), m.group(6));
+                }
+            }
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
+
+        return (macAddress == null) ? "" : macAddress;
+    }
 
     public static String getWifiMacAddress() {
         try {
@@ -159,5 +170,32 @@ public class NetworkUtil {
         return "";
     }
 
+    public static String getMacAddress1(String interfaceName) {
+        try {
+            Enumeration<NetworkInterface> interfaces = NetworkInterface.getNetworkInterfaces();
+            while (interfaces.hasMoreElements()) {
+                NetworkInterface networkInterface = interfaces.nextElement();
+
+                if (TextUtils.equals(networkInterface.getName(), interfaceName)) {
+                    byte[] bytes = networkInterface.getHardwareAddress();
+                    StringBuilder builder = new StringBuilder();
+                    for (byte b : bytes) {
+                        builder.append(String.format("%02X:", b));
+                    }
+
+                    if (builder.length() > 0) {
+                        builder.deleteCharAt(builder.length() - 1);
+                    }
+
+                    return builder.toString();
+                }
+            }
+
+            return "<EMPTY>";
+        } catch (SocketException e) {
+            Log.e("결", "Get Mac Address Error", e);
+            return "<ERROR>";
+        }
+    }
 
 }
