@@ -14,7 +14,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".macaddress.chormebook.ChromeBookSystemActivity">
+        <activity android:name=".macaddress.chormebook.ChromeBookMacAddressActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

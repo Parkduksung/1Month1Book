@@ -12,6 +12,7 @@ import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.net.NetworkInterface;
 import java.net.SocketException;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Enumeration;
 import java.util.List;
@@ -223,6 +224,49 @@ public class NetworkUtil {
             ex.printStackTrace();
         }
         return macSerial;
+    }
+
+    public static String getMacAddress2() {
+        NetworkInterface [] ethernets = getValidEthernetInterface();
+        for(NetworkInterface ni : ethernets) {
+            try {
+                byte[] hwAddr = ni.getHardwareAddress();
+                if ((hwAddr != null) && (hwAddr.length == 6)) {
+                    String mac = String.format("%02X:%02X:%02X:%02X:%02X:%02X",
+                            hwAddr[0], hwAddr[1], hwAddr[2], hwAddr[3], hwAddr[4], hwAddr[5]
+                    );
+                    return mac;
+                }
+            }catch(SocketException e) {
+                e.printStackTrace();
+            }
+        }
+        return "00:00:00:00:00:00";
+    }
+
+
+
+
+
+    public static NetworkInterface [] getValidEthernetInterface() {
+        List<NetworkInterface> ethernets = new ArrayList<NetworkInterface>();
+        try {
+            Enumeration<NetworkInterface> ifs = NetworkInterface.getNetworkInterfaces();
+            NetworkInterface ni;
+            String name;
+            while(ifs.hasMoreElements()) {
+                ni = ifs.nextElement();
+                if(ni.isLoopback()) continue;
+                if(!ni.isUp()) continue;
+                name = ni.getName();
+                if((name != null) && (name.startsWith("en"))) {
+                    ethernets.add(ni);
+                }
+            }
+        }catch(SocketException e) {
+            e.printStackTrace();
+        }
+        return ethernets.toArray(new NetworkInterface[0]);
     }
 
 }

@@ -21,6 +21,13 @@ class ChromeBookMacAddressActivity : AppCompatActivity() {
         Log.d("결과3", NetworkUtil.getMacAddress(this))
         Log.d("결과4", NetworkUtil.getMacAddress1("wlan0"))
         Log.d("결과5", NetworkUtil.getMac())
+        Log.d("결과6", NetworkUtil.getMacAddress2())
+
+
+        NetworkUtil.getValidEthernetInterface().forEach {
+            Log.d("결과7", it.hardwareAddress.toString())
+            Log.d("결과7", it.hardwareAddress.size.toString())
+        }
 
     }
 
