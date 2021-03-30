@@ -7,6 +7,9 @@ import android.provider.SyncStateContract;
 import android.text.TextUtils;
 import android.util.Log;
 
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.LineNumberReader;
 import java.net.NetworkInterface;
 import java.net.SocketException;
 import java.util.Collections;
@@ -196,6 +199,30 @@ public class NetworkUtil {
             Log.e("결", "Get Mac Address Error", e);
             return "<ERROR>";
         }
+    }
+
+    public static String getMac() {
+        String macSerial = "";
+        String str = "";
+        try {//from  w w w .  jav a2s  .  co m
+            Process pp = Runtime.getRuntime().exec("cat /sys/class/net/wlan0/address");
+            InputStreamReader ir = new InputStreamReader(pp.getInputStream());
+            LineNumberReader input = new LineNumberReader(ir);
+
+            for (; null != str;) {
+                str = input.readLine();
+                if (str != null) {
+                    macSerial = str.trim();
+                    break;
+                }
+            }
+
+        } catch (IOException ex) {
+
+            Log.d("결과", ex.toString());
+            ex.printStackTrace();
+        }
+        return macSerial;
     }
 
 }
