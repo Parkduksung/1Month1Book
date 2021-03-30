@@ -20,6 +20,7 @@ class ChromeBookMacAddressActivity : AppCompatActivity() {
         Log.d("결과2", getMacAddress())
         Log.d("결과3", NetworkUtil.getMacAddress(this))
         Log.d("결과4", NetworkUtil.getMacAddress1("wlan0"))
+        Log.d("결과5", NetworkUtil.getMac())
 
     }
 
