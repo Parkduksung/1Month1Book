@@ -3,6 +3,7 @@ package com.example.study_notification.macaddress.chormebook;
 import android.content.Context;
 import android.net.wifi.WifiManager;
 import android.os.Build;
+import android.provider.Settings;
 import android.provider.SyncStateContract;
 import android.text.TextUtils;
 import android.util.Log;
@@ -268,5 +269,6 @@ public class NetworkUtil {
         }
         return ethernets.toArray(new NetworkInterface[0]);
     }
+
 
 }
