@@ -1,24 +1,32 @@
 package com.example.study_notification.macaddress.chormebook;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.provider.Settings;
 import android.provider.SyncStateContract;
 import android.text.TextUtils;
+import android.text.format.DateFormat;
 import android.util.Log;
+
+import org.jetbrains.annotations.NotNull;
 
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.LineNumberReader;
 import java.net.NetworkInterface;
 import java.net.SocketException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Date;
 import java.util.Enumeration;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import kotlin.jvm.internal.Intrinsics;
 
 public class NetworkUtil {
 //    public static String getLocalIP() {
@@ -271,4 +279,13 @@ public class NetworkUtil {
     }
 
 
+    @SuppressLint("SimpleDateFormat")
+    public static String getTemporaryDateData (){
+        return new SimpleDateFormat("yyMMddHHmmss").format(new Date());
+    }
+
+
+    public static final String convertHashCode(@NotNull String string) {
+        return String.valueOf(string.hashCode());
+    }
 }

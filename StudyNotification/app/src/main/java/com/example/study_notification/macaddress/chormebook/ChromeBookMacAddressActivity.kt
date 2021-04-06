@@ -12,6 +12,8 @@ import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import com.example.study_notification.R
+import com.example.study_notification.macaddress.chormebook.NetworkUtil.convertHashCode
+import com.example.study_notification.macaddress.chormebook.NetworkUtil.getTemporaryDateData
 import java.util.*
 
 @RequiresApi(Build.VERSION_CODES.M)
@@ -37,13 +39,14 @@ class ChromeBookMacAddressActivity : AppCompatActivity() {
 //
 //        val androidId: String =
 //            Settings.Secure.getString(contentResolver, Settings.Secure.ANDROID_ID)
-//
+
 //        findViewById<TextView>(R.id.android_text).text =androidId
 
 //        Log.d("결과8", androidId)
 
 
-        Log.d("결과", getWidevineID() ?: "123")
+//        Log.d("결과", "U0VDUEhPTkVfMDAwMDAwMDAwMDAwMDAwMDAxMzcxNTQ=".hashCode().toString() ?: "123")
+        Log.d("결과", convertHashCode(getTemporaryDateData()) )
     }
 
 
@@ -58,18 +61,16 @@ class ChromeBookMacAddressActivity : AppCompatActivity() {
         return info.macAddress
     }
 
-    private fun getWidevineID(): String? {
-
+    private fun getWideVineID(): String? {
         return try {
 
             val wvDrm = MediaDrm(UUID(-0x121074568629b532L, -0x5c37d8232ae2de13L))
-
-            val widevineId = wvDrm.getPropertyByteArray(MediaDrm.PROPERTY_DEVICE_UNIQUE_ID)
+            val wideVineId = wvDrm.getPropertyByteArray(MediaDrm.PROPERTY_DEVICE_UNIQUE_ID)
 
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                Base64.getEncoder().encodeToString(widevineId).trim()
+                Base64.getEncoder().encodeToString(wideVineId).trim()
             } else {
-                android.util.Base64.encodeToString(widevineId, android.util.Base64.DEFAULT).trim()
+                android.util.Base64.encodeToString(wideVineId, android.util.Base64.DEFAULT).trim()
             }
 
         } catch (e: UnsupportedSchemeException) {
