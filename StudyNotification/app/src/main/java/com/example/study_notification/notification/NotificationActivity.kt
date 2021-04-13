@@ -5,6 +5,7 @@ import android.app.NotificationManager
 import android.content.Context
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationCompat
@@ -25,6 +26,7 @@ class NotificationActivity : AppCompatActivity() {
         createNotification()
 
         findViewById<Button>(R.id.notification_button).setOnClickListener {
+            Log.d("결과", "클릭됨")
             sendNotification()
         }
     }
@@ -48,6 +50,7 @@ class NotificationActivity : AppCompatActivity() {
 
     private fun sendNotification() {
         val builder = NotificationCompat.Builder(this, CHANNEL_ID)
+            .setSmallIcon(R.drawable.notification_icon)
             .setContentTitle("duksung")
             .setContentText("덕성")
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
