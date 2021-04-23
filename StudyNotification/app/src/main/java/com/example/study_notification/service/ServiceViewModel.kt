@@ -7,7 +7,10 @@ import android.content.Intent
 import android.content.ServiceConnection
 import android.os.IBinder
 import android.util.Log
-import androidx.lifecycle.*
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleObserver
+import androidx.lifecycle.OnLifecycleEvent
 
 class ServiceViewModel(private val app: Application) : AndroidViewModel(app), LifecycleObserver {
 
@@ -39,10 +42,11 @@ class ServiceViewModel(private val app: Application) : AndroidViewModel(app), Li
 
     private val serviceConnection = object : ServiceConnection {
         override fun onServiceConnected(name: ComponentName?, service: IBinder?) {
-
+            Log.d(TAG , "onServiceConnected")
         }
 
         override fun onServiceDisconnected(name: ComponentName?) {
+            Log.d(TAG , "onServiceDisconnected")
         }
     }
 }

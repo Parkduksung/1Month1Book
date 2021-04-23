@@ -3,6 +3,7 @@ package com.example.study_notification.service
 import android.app.PendingIntent
 import android.app.Service
 import android.content.Intent
+import android.content.ServiceConnection
 import android.os.Binder
 import android.os.IBinder
 import android.util.Log
@@ -32,9 +33,14 @@ class MainService : Service(), LifecycleObserver {
     }
 
     override fun onBind(intent: Intent?): IBinder? {
+        Log.d(TAG, "onBind")
         return ServiceLocalBinder(ServiceContext())
     }
 
+    override fun unbindService(conn: ServiceConnection) {
+        Log.d(TAG, "unbindService")
+        super.unbindService(conn)
+    }
 
     //서비스가 메모리 관련해서 끊어져도 다시 실행 안하게 설정.
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
