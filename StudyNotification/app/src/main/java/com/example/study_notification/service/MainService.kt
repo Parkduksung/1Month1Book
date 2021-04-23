@@ -5,7 +5,12 @@ import android.app.Service
 import android.content.Intent
 import android.os.Binder
 import android.os.IBinder
+import android.util.Log
 import androidx.core.app.NotificationCompat
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleObserver
+import androidx.lifecycle.OnLifecycleEvent
+import androidx.lifecycle.ProcessLifecycleOwner
 import com.example.study_notification.R
 
 
@@ -19,7 +24,13 @@ class ServiceLocalBinder(private val serviceContext: ServiceContext) : Binder() 
     }
 }
 
-class MainService : Service() {
+class MainService : Service(), LifecycleObserver {
+
+    companion object{
+        private const val TAG = "MainService"
+
+    }
+
     override fun onBind(intent: Intent?): IBinder? {
         return ServiceLocalBinder(ServiceContext())
     }
@@ -32,11 +43,24 @@ class MainService : Service() {
 
     override fun onCreate() {
         super.onCreate()
+        ProcessLifecycleOwner.get().lifecycle.addObserver(this)
     }
 
     override fun onDestroy() {
         super.onDestroy()
+        ProcessLifecycleOwner.get().lifecycle.removeObserver(this)
     }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
+    private fun inServiceBackground() {
+        Log.d(TAG, "inServiceBackground")
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_START)
+    private fun inServiceForeground() {
+        Log.d(TAG, "inServiceForeground")
+    }
+
 
 
     private fun startForegroundService() {
