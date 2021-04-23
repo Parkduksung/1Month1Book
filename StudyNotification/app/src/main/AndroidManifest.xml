@@ -24,6 +24,8 @@
 
         <activity android:name=".activityresult.GetResultActivity" />
 
+        <service android:name=".service.MainService" />
+
     </application>
 
 </manifest>
