@@ -15,17 +15,18 @@ import androidx.lifecycle.OnLifecycleEvent
 class ServiceViewModel(private val app: Application) : AndroidViewModel(app), LifecycleObserver {
 
     companion object {
-        private const val TAG = "ServiceViewModel"
+        private const val TAG = "ServiceExam"
     }
 
     override fun onCleared() {
-        Log.d("ServiceViewModel", "onCleared")
+        Log.d(TAG, "ServiceViewModel onCleared")
         super.onCleared()
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
     fun onStopScreen() {
-        Log.d("ServiceViewModel", "onStopScreen")
+        Log.d(TAG, "ServiceViewModel onStopScreen")
+        serviceSession?.release()
         app.unbindService(serviceConnection)
     }
 
@@ -36,17 +37,59 @@ class ServiceViewModel(private val app: Application) : AndroidViewModel(app), Li
             serviceConnection,
             Context.BIND_AUTO_CREATE
         )
-        Log.d("ServiceViewModel", "onStartScreen")
+        Log.d(TAG, "ServiceViewModel onStartScreen")
     }
 
+    private var serviceSession: ServiceSession? = null
+
+    private val sessionListener = object : ServiceSession.OnSessionListener {
+        override fun onChangedStatus(status: ServiceSession.Status) {
+
+            when(status) {
+
+                ServiceSession.Status.Connecting -> {
+                    Log.d(TAG , "ServiceViewModel ServiceSession.Status.Connecting")
+                }
+
+                ServiceSession.Status.Disconnecting -> {
+                    Log.d(TAG , "ServiceViewModel ServiceSession.Status.Disconnecting")
+                }
+            }
+
+        }
+    }
 
     private val serviceConnection = object : ServiceConnection {
         override fun onServiceConnected(name: ComponentName?, service: IBinder?) {
-            Log.d(TAG , "onServiceConnected")
+
+            val service  = (service as ServiceLocalBinder).getService()
+            serviceSession = service.getServiceSession().apply {
+                registerSessionListener(sessionListener)
+
+                val serviceSessionStatus = getStatus()
+
+                when(serviceSessionStatus) {
+
+                    ServiceSession.Status.Idle -> {
+                        Log.d(TAG , "ServiceViewModel ServiceSession.Status.Idle")
+                    }
+
+                    ServiceSession.Status.Connecting -> {
+                        Log.d(TAG , "ServiceViewModel ServiceSession.Status.Connecting")
+                    }
+
+                    ServiceSession.Status.Disconnecting -> {
+                        Log.d(TAG , "ServiceViewModel ServiceSession.Status.Disconnecting")
+                    }
+                }
+
+            }
+
         }
 
         override fun onServiceDisconnected(name: ComponentName?) {
-            Log.d(TAG , "onServiceDisconnected")
+            serviceSession = null
+            Log.d(TAG, "ServiceViewModel onServiceDisconnected")
         }
     }
 }
